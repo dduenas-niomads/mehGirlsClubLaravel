@@ -179,7 +179,8 @@ class HomeController extends Controller
                     
                 return view('index', compact('shopUser', 'orders', 'shopUserCupons'));
             } catch (\Throwable $th) {
-                return "usuario no existe";
+                dd($th);
+                return "error de usuario";
             }
         } else {
             return view('nosession');
@@ -299,61 +300,5 @@ class HomeController extends Controller
             }
         }
         return "error de usuario";
-    }
-    
-    public function create()
-    {
-        return view('cars.create_new');
-    }
-    
-    public function edit($id)
-    {
-        $car = Car::find($id);
-        if (!is_null($car)) {
-            return view('cars.edit', compact('car'));
-        } else {
-            return view('cars.errors.not_found');
-        }
-    }
-
-    public function store(Request $request)
-    {
-        $params = $request->all();
-        $params['created_by'] = Auth::user()->id;
-        $car = Car::create($params);
-        return $this->index();
-    }
-
-    public function update($id, Request $request)
-    {
-        $params = $request->all();
-        $car = Car::find($id);
-        if (!is_null($car)) {
-            $params['updated_by'] = Auth::user()->id;
-            $car->fill($params);
-            $car->save();
-            return $this->index();
-        } else {
-            return view('cars.errors.not_found');
-        }
-    }
-    
-    public function destroy($id, Request $request)
-    {
-        $car = Car::find($id);
-        if (!is_null($car)) {
-            $car->deleted_by = Auth::user()->id;
-            $car->flag_active = Car::STATE_INACTIVE;
-            $car->deleted_at = date("Y-m-d H:i:s");
-            $car->save();
-            return $this->index();
-        } else {
-            return view('cars.errors.not_found');
-        }
-    }
-
-    public function show($id, Request $request)
-    {
-        return "show method";
     }
 }
