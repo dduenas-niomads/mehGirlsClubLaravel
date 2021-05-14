@@ -1,0 +1,4 @@
+Slince\Shopify\Model\Orders\Transaction:
+    properties:
+        receipt:
+            type: array

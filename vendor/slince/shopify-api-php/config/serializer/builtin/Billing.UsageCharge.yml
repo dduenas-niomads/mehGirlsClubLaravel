@@ -1,0 +1,4 @@
+Slince\Shopify\Model\Billing\UsageCharge:
+  properties:
+      billingOn:
+        type: DateTime<'Y-m-d'>

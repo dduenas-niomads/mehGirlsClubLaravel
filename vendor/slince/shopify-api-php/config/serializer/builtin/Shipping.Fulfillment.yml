@@ -1,0 +1,4 @@
+Slince\Shopify\Model\Shipping\Fulfillment:
+    properties:
+        receipt:
+            type: array

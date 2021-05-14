@@ -1,0 +1,26 @@
+{
+    "name": "slince/di",
+    "description": "A flexible dependency injection container",
+    "keywords": ["di", "ioc", "container", "dependency injection", "PSR-11", "injection"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Tao",
+            "email": "taosikai@yeah.net"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "php": ">=7.2.5",
+        "dflydev/dot-access-data": "^3.0",
+        "psr/container": "^1.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^7.5|^8.0|^9.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Slince\\Di\\": ""
+        }
+    }
+}
