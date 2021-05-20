@@ -2091,7 +2091,7 @@
                                         <img src="/statics/img/how/01.png">
                                       </div>
                                       <div class="flip-box-back" valign="middle">
-                                        <h2 class="flip-box-back-font">Valido para compras en tienda y web.</h2>
+                                        <h2 class="flip-box-back-font">Válido para compras en tienda y web.</h2>
                                       </div>
                                     </div>
                                  </div>
@@ -2111,7 +2111,7 @@
                                         <img src="/statics/img/how/03.png">
                                       </div>
                                       <div class="flip-box-back" valign="middle">
-                                        <h2 class="flip-box-back-font">Valido para compartir via whatsapp o por instagram.</h2>
+                                        <h2 class="flip-box-back-font">Válido para compartir via whatsapp o por instagram.</h2>
                                       </div>
                                     </div>
                                  </div>

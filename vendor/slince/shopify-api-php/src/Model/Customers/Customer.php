@@ -533,7 +533,7 @@ class Customer
     /**
      * @return string
      */
-    public function getMarketingOptInLevel(): string
+    public function getMarketingOptInLevel()
     {
         return $this->marketingOptInLevel;
     }
