@@ -2113,11 +2113,11 @@
                            <div class="rte">
                               <div>
                                  <br>
-                                 <h3 class="font-weight-bold pl-0 my-4" align="center" style="font-size: 1.38462em;"><strong>Gana puntos y sube de nivel para recibir beneficios exclusivos</strong></h3>
+                                 <h3 class="font-weight-bold pl-0 my-4" align="center" style="font-size: 1.2em;"><strong>Gana puntos y sube de nivel para recibir beneficios exclusivos</strong></h3>
                               </div>
                               <div class="row">
                                  <div class="col-md-12" align="center">
-                                    <h2 style="font-size: 1.38462em;">
+                                    <h2 style="font-size: 1em;">
                                        Queremos premiar a nuestras clientas con los mejores beneficios. Gana puntos comprando en Meh y sube de nivel para obtener beneficios increibles
                                     </h2>
                                     <br>
