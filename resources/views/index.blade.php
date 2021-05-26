@@ -1263,7 +1263,8 @@
                <div class="grid__item post-large--two-thirds push--post-large--one-sixth">
                   <div class="section-header">
                      <div class="row banner_full">
-                        <div class="col-6" align="center">
+                        <img src="statics/img/banners/banner.jpg" style="width: 100%;">
+                        <!-- <div class="col-6" align="center">
                            <img src="statics/img/banners/hey_babe.png" style="width: 50%;">
                            <br><br>
                            <h2><b>¡Hola, {{ $shopUser->first_name }}!</b></h2>
@@ -1278,7 +1279,7 @@
                                  <button type="button" class="btn" style="background-color: #eacaca;" onclick="goToNav('nav-profile-tab');">MI PERFIL</button>
                               </div>
                               <div class="col-4">
-                                 <!-- <button type="button" class="btn" style="background-color: #eacaca;">BENEFICIOS</button> -->
+                                 <button type="button" class="btn" style="background-color: #eacaca;">BENEFICIOS</button>
                               </div>
                               <div class="col-4">
                               </div>
@@ -1286,7 +1287,7 @@
                         </div>
                         <div class="col-6">
                            <img src="statics/img/banners/banner_logo.png" style="width: 50%;">
-                        </div>
+                        </div> -->
                      </div>
                      <div class="row banner_mobile">
                         <div>
