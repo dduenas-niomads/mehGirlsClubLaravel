@@ -1321,9 +1321,6 @@
                         <li class="nav-item">
                            <a class="nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Perfil</a>
                         </li>
-                        <li class="nav-item">
-                           <a class="nav-link" id="nav-cupons-tab" data-toggle="tab" href="#nav-cupons" role="tab" aria-controls="nav-cupons" aria-selected="false">Mis cupones</a>
-                        </li>
                      </ul>
                      <div class="tab-content" id="nav-tabContent">
                         <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
@@ -1482,97 +1479,6 @@
                                              </tbody>
                                           </table>
                                     </div>
-                                 </div>
-
-                                 <div class="col-md-2"></div>
-                              </div>
-                              <br>
-                              <hr>
-                           </div>
-                        </div>
-                        <div class="tab-pane fade" id="nav-cupons" role="tabpanel" aria-labelledby="nav-cupons-tab">
-                           <div class="rte">
-                              <br>
-                              <h3 class="font-weight-bold pl-0 my-4" align="center"><strong id="cuponsInfoH3">Te quedan 246 puntos disponibles</strong></h3>
-                              <br>
-                              <div class="row" id="cuponsInfoTab">
-                                 
-                                 <div class="col-md-2"></div>
-
-                                 <div class="col-md-8" align="left" id="discountCodeForm">
-                                    <h4>Selecciona un tipo de canje para crear tu código de descuento</h4>
-                                    <br>
-                                    <form action="/create-codes.php" method="POST">
-                                       <input type="hidden" name="userId" id="userIdHiddenInput">
-                                       <div class="table-wrap" style="border-radius: 10px;">
-                                          <table class="table table-bordered" style="font-size: 12px;">
-                                             <thead class="table-dark">
-                                                <tr>
-                                                   <th>Cupón</th>
-                                                   <th>Costo</th>
-                                                   <th>Elegir</th>
-                                                </tr>
-                                             </thead>
-                                             <tbody>
-                                                <tr>
-                                                   <td>10% off</td>
-                                                   <td>100 puntos</td>
-                                                   <td><input type="checkbox" name="cupons[]" value="1"></td>
-                                                </tr>
-                                                <tr>
-                                                   <td>15% off</td>
-                                                   <td>200 puntos</td>
-                                                   <td><input type="checkbox" name="cupons[]" value="2"></td>
-                                                </tr>
-                                                <tr>
-                                                   <td>25% off</td>
-                                                   <td>450 puntos</td>
-                                                   <td><input type="checkbox" name="cupons[]" value="3"></td>
-                                                </tr>
-                                                <tr>
-                                                   <td>50% off</td>
-                                                   <td>1500 puntos</td>
-                                                   <td><input type="checkbox" name="cupons[]" value="4"></td>
-                                                </tr>
-                                                <tr>
-                                                   <td>Meh basic sorpresa</td>
-                                                   <td>2500 puntos</td>
-                                                   <td><input type="checkbox" name="cupons[]" value="5"></td>
-                                                </tr>
-                                                <tr>
-                                                   <td>1 Denim</td>
-                                                   <td>500 puntos</td>
-                                                   <td><input type="checkbox" name="cupons[]" value="6"></td>
-                                                </tr>
-                                                <tr>
-                                                   <td>1 par de zapatos</td>
-                                                   <td>500 puntos</td>
-                                                   <td><input type="checkbox" name="cupons[]" value="7"></td>
-                                                </tr>
-                                                <tr>
-                                                   <td>1 envío estándar gratis</td>
-                                                   <td>100 puntos</td>
-                                                   <td><input type="checkbox" name="cupons[]" value="8"></td>
-                                                </tr>
-                                                <tr>
-                                                   <td>S/ 50.00 soles de dscto</td>
-                                                   <td>250 puntos</td>
-                                                   <td><input type="checkbox" name="cupons[]" value="9"></td>
-                                                </tr>
-                                                <tr>
-                                                   <td>S/ 100.00 soles de dscto</td>
-                                                   <td>350 puntos</td>
-                                                   <td><input type="checkbox" name="cupons[]" value="10"></td>
-                                                </tr>
-                                             </tbody>
-                                          </table>
-                                       </div>
-                                       <div class="form-group row" style="margin-bottom: 0rem;">
-                                          <div class="col-sm-12" align="center">
-                                             <button class="btn btn-outline-default" type="button" onclick="goToNav('nav-profile-tab');">CREAR CÓDIGOS DE DESCUENTO</button>
-                                          </div>
-                                       </div>
-                                    </form>
                                  </div>
 
                                  <div class="col-md-2"></div>

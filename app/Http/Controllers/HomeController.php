@@ -226,6 +226,7 @@ class HomeController extends Controller
             // validacion de datos actualizados
             return redirect('/home?userId=' . $shopUser->shop_id);
         } else {
+            dd($th);
             return "error de usuario";
         }
     }
@@ -243,6 +244,7 @@ class HomeController extends Controller
                     return view('create_cupon', compact('shopUser', 'cupon'));
                 }
             } else {
+                dd($th);
                 return "error de usuario";
             }
         }
