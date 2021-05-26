@@ -2080,7 +2080,7 @@
                                        Queremos premiar a nuestras clientas con los mejores beneficios. Gana puntos comprando en Meh y sube de nivel para obtener beneficios increibles
                                     </h2>
                                     <br>
-                                    <button type="button" class="btn"  style="background-color: #eacaca;">SHOP NOW GOGO!</button>
+                                    <button type="button" class="btn"  style="background-color: #eacaca; font-size: 1em;">SHOP NOW!</button>
                                     <h2 style="margin-top: 1em;">Ademas, realiza las siguientes acciones y obten tus primeros puntos:</h2>
                                  </div>
                               </div>
