@@ -1094,7 +1094,7 @@
            
       </script>
    </head>
-   <body id="meh-girls-club" class="customer-logged-in template-page" style="font-family: 'Montserrat'; font-size: 12px;">
+   <body id="meh-girls-club" class="customer-logged-in template-page" style="font-family: 'Armata'; font-size: 12px;">
       <div id="shopify-section-header" class="shopify-section">
          <style>
             .logo__image-wrapper {
@@ -1529,7 +1529,7 @@
                                     </div>
                                     <div class="form-group row" style="margin-bottom: 0rem;">
                                        <div class="col-sm-12" align="center">
-                                          <button class="btn btn-outline-default" type="button" onclick="goToNav('nav-benefits-tab');">CANJEAR CÓDIGOS DE DESCUENTO</button>
+                                          <button class="btn" style="background-color: #eacaca;" type="button" onclick="goToNav('nav-benefits-tab');">CANJEAR CÓDIGOS DE DESCUENTO</button>
                                        </div>
                                     </div>
                                  </div>

@@ -1094,7 +1094,7 @@
            
       </script>
    </head>
-   <body id="meh-girls-club" class="customer-logged-in template-page" style="font-family: 'Montserrat'; font-size: 12px;">
+   <body id="meh-girls-club" class="customer-logged-in template-page" style="font-family: 'Armata'; font-size: 12px;">
       <div id="shopify-section-header" class="shopify-section">
          <style>
             .logo__image-wrapper {
@@ -1263,30 +1263,7 @@
                <div class="grid__item post-large--two-thirds push--post-large--one-sixth">
                   <div class="section-header">
                      <div class="row banner_full">
-                        <div class="col-6" align="center">
-                           <img src="statics/img/banners/hey_babe.png" style="width: 50%;">
-                           <br>
-                           <!-- <h1><b>MEH INTERN</b></h1> -->
-                           <h3>¡Gracias por ser parte de Meh Girls Club!. Tenemos descuentos y regalos para tí.</h3>
-                           <h4>Porfavor, <b>inicia sesión</b> para más opciones</h4>
-                           <br>
-                           <div class="row">
-
-                              <div class="col-4">
-                              </div>
-                              <div class="col-4">
-                                 <button type="button" class="btn" style="background-color: #eacaca;" onclick="goToNav('nav-profile-tab');">MI PERFIL</button>
-                              </div>
-                              <div class="col-4">
-                                 <!-- <button type="button" class="btn" style="background-color: #eacaca;">BENEFICIOS</button> -->
-                              </div>
-                              <div class="col-4">
-                              </div>
-                           </div>
-                        </div>
-                        <div class="col-6">
-                           <img src="statics/img/banners/banner_logo.png" style="width: 50%;">
-                        </div>
+                        <img src="statics/img/banners/banner.jpg" style="width: 100%;">
                      </div>
                      <div class="row banner_mobile">
                         <div>
