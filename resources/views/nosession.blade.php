@@ -136,6 +136,9 @@
          .banner_mobile{
             display:none;
          }
+         .site-nav-full{
+            display: flex;
+         }
          /* The flip box container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
          .flip-box {
             background-color: transparent;
@@ -176,7 +179,7 @@
 
          /* Style the front side (fallback if image is missing) */
          .flip-box-front {
-            background-color: #bbb;
+            background-color: #fff;
             color: black;
          }
 
@@ -190,20 +193,23 @@
             .banner_full{
                display:none;
             }
+            .site-nav-full{
+               display: none;
+            }
             .banner_mobile{
                display:block;
             }
             .flip-box-back-font{
-               font-size: 1em;
+               font-size: 0.75em;
+               padding: 1em;
             }
             .flip-box{
-               height: 60px;
+               height: 85px;
             }
          }
       </style>
       
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-      <link href="https://app-spinner.carecart.io/public/app/css/front-store-spinner.css?v=1.5.8" type="text/css" rel="stylesheet">
       <style>.sweet-alert fieldset {
          display: none;
          }
@@ -1005,9 +1011,50 @@
                   <a href="https://mehperu.com" itemprop="url">
                   <img class="logo__image lazyautosizes lazyloaded" src="https://cdn.shopify.com/s/files/1/0025/5308/6019/files/MEH_1_300x300.png?v=1591326725">
                   </a>
-               </div>
+               </div>               
                <div class="grid--full medium-down--hide">
-                  <div class="grid__item">
+                  <div class="grid__item"><ul class="site-nav site-nav-full" id="AccessibleNav" style="margin-left:120px; float: left;">
+                  <li>
+                     <a href="https://mehperu.com/collections/new-in-meh" class="site-nav__link" data-meganav-type="child" tabindex="">
+                        NEW IN 
+                     </a>
+                  </li>
+                  <li>
+                     <a href="https://mehperu.com/collections/meh-x-winnie-v2" class="site-nav__link" data-meganav-type="child" tabindex="">
+                        MehxWinnie
+                     </a>
+                  </li>
+                  <li>
+                     <a href="https://mehperu.com/collections/knit" class="site-nav__link" data-meganav-type="child" tabindex="">
+                        KNITWEAR
+                     </a>
+                  </li>
+                  <li>
+                     <a href="https://mehperu.com/collections/basics-v1" class="site-nav__link" data-meganav-type="child" tabindex="">
+                        BASICS 
+                     </a>
+                  </li>
+                  <li>
+                     <a href="http://rebelsclo.com" class="site-nav__link" data-meganav-type="child" tabindex="">
+                        REBELS
+                     </a>
+                  </li>
+                  <li>
+                     <a href="https://mehperu.com/collections/sale-abril" class="site-nav__link" data-meganav-type="child" tabindex="">
+                        SALE 
+                     </a>
+                  </li>
+                  <li>
+                     <a href="https://mehperu.com/collections/meh-details" class="site-nav__link" data-meganav-type="child" tabindex="">
+                        DETAILS
+                     </a>
+                  </li>
+                  <li>
+                     <a href="https://mehperu.com/products/giftcard-meh" class="site-nav__link" data-meganav-type="child" tabindex="">
+                        GIFTCARD ♥
+                     </a>
+                  </li>
+               </ul>
                      <div class="site-nav" style="right: 0; margin-right: 30px;">
                         <div class="header-bar__module header-bar__search">
                            <form action="https://mehperu.com/search" method="get" class="header-bar__search-form clearfix" role="search">
@@ -1020,10 +1067,10 @@
                         <div class="header-bar__module">
                            <ul class="header-bar__module--list">
                               <li>
-                                 <a href="https://mehperu.com/account" id="liMiAccount">Mi cuenta</a>
+                                 <a href="https://mehperu.com/account" id="liMiAccount"></a>
                               </li>
                               <li>
-                                 <a href="https://mehperu.com/account/logout" id="customer_logout_link">Cerrar sesión</a>
+                                 <a href="https://mehperu.com/account/logout" id="customer_logout_link"></a>
                               </li>
                            </ul>
                         </div>
@@ -1045,100 +1092,64 @@
                <div class="wrapper post-large--hide announcement-bar--mobile">
                </div>
                <div class="wrapper post-large--hide">
-                  <button type="button" class="mobile-nav-trigger" id="MobileNavTrigger" aria-controls="MobileNav" aria-expanded="false">
-                  <span class="icon icon-hamburger" aria-hidden="true"></span>
+                  <button type="button" class="mobile-nav-trigger" id="MobileNavTrigger" onClick="MobileNavTriggerEvent();" aria-controls="MobileNav" aria-expanded="false">
+                     <span class="icon icon-hamburger" aria-hidden="true">MENU</span>
                   </button>
-                  <a href="/cart" class="cart-page-link mobile-cart-page-link">
+                  <a href="https://mehperu.com/cart" class="cart-page-link mobile-cart-page-link">
                      <div class="cart-logo" style="float: left;"></div>
                      <span class="cart-count hidden-count" style="font-weight: bold; float: right;">0</span>
                   </a>
                   &nbsp;
-                  <a href="/search" class="cart-page-link mobile-cart-page-link">
+                  <a href="https://mehperu.com/search" class="cart-page-link mobile-cart-page-link">
                      <div class="search-logo"></div>
                   </a>
                </div>
                <nav role="navigation">
-                  <ul id="MobileNav" class="mobile-nav post-large--hide">
+                  <ul id="MobileNav" class="mobile-nav post-large--hide" style="display: none;">
                      <li class="mobile-nav__link">
-                        <a href="/collections/meh-x-winnie-v2" class="mobile-nav">
+                        <a href="https://mehperu.com/collections/meh-x-winnie-v2" class="mobile-nav">
                         MehxWinnie
                         </a>
                      </li>
                      <li class="mobile-nav__link">
-                        <a href="/collections/chompas" class="mobile-nav">
+                        <a href="https://mehperu.com/collections/chompas" class="mobile-nav">
                         KNITWEAR
                         </a>
                      </li>
                      <li class="mobile-nav__link">
-                        <a href="/collections/basics-v1" class="mobile-nav">
+                        <a href="https://mehperu.com/collections/basics-v1" class="mobile-nav">
                         MEHBASICS
                         </a>
                      </li>
                      <li class="mobile-nav__link">
-                        <a href="/collections/rebelsclo" class="mobile-nav">
+                        <a href="https://mehperu.com/collections/rebelsclo" class="mobile-nav">
                         REBELS
                         </a>
                      </li>
                      <li class="mobile-nav__link">
-                        <a href="/collections/shoes" class="mobile-nav">
+                        <a href="https://mehperu.com/collections/shoes" class="mobile-nav">
                         SHOES
                         </a>
                      </li>
                      <li class="mobile-nav__link">
-                        <a href="/collections/meh-details" class="mobile-nav">
+                        <a href="https://mehperu.com/collections/meh-details" class="mobile-nav">
                         DETAILS
                         </a>
                      </li>
                      <li class="mobile-nav__link">
-                        <a href="/collections/meh-undies" class="mobile-nav">
+                        <a href="https://mehperu.com/collections/meh-undies" class="mobile-nav">
                         UNDIES 
                         </a>
                      </li>
                      <li class="mobile-nav__link">
-                        <a href="/collections/meh-upcycled" class="mobile-nav">
+                        <a href="https://mehperu.com/collections/meh-upcycled" class="mobile-nav">
                         UPCYCLED
                         </a>
                      </li>
                      <li class="mobile-nav__link">
-                        <a href="/collections/last-units-left" class="mobile-nav">
+                        <a href="https://mehperu.com/collections/last-units-left" class="mobile-nav">
                         ULTIMAS UNIDADES
                         </a>
-                     </li>
-                     <li class="mobile-nav__link" aria-haspopup="true">
-                        <a href="http://www.mehperu.com" class="mobile-nav__sublist-trigger" aria-controls="MobileNav-Parent-10" aria-expanded="false">
-                        #
-                        <span class="icon-fallback-text mobile-nav__sublist-expand" aria-hidden="true">
-                        <span class="icon icon-plus" aria-hidden="true"></span>
-                        <span class="fallback-text">+</span>
-                        </span>
-                        <span class="icon-fallback-text mobile-nav__sublist-contract" aria-hidden="true">
-                        <span class="icon icon-minus" aria-hidden="true"></span>
-                        <span class="fallback-text">-</span>
-                        </span>
-                        </a>
-                        <ul id="MobileNav-Parent-10" class="mobile-nav__sublist">
-                           <li class="mobile-nav__sublist-link">
-                              <a href="https://mehperu.com/pages/mehgirl">
-                              #MEHGIRL
-                              </a>
-                           </li>
-                           <li class="mobile-nav__sublist-link">
-                              <a href="https://mehperu.com/products/mehassistant">
-                              #MEHASSISTANT
-                              </a>
-                           </li>
-                           <li class="mobile-nav__sublist-link">
-                              <a href="https://mehperu.com/pages/covid19">
-                              #COVID19
-                              </a>
-                           </li>
-                        </ul>
-                     </li>
-                     <li class="mobile-nav__link">
-                        <a href="https://mehperu.com/account">Mi cuenta</a>
-                     </li>
-                     <li class="mobile-nav__link">
-                        <a href="https://mehperu.com/account/logout" id="customer_logout_link">Cerrar sesión</a>
                      </li>
                   </ul>
                </nav>
@@ -1152,24 +1163,10 @@
                <div class="grid__item post-large--two-thirds push--post-large--one-sixth">
                   <div class="section-header">
                      <div class="row banner_full">
-                        <img src="statics/img/banners/banner.jpg" style="width: 100%;">
+                        <img src="statics/img/banners/banner_web.jpg" style="width: 100%;">
                      </div>
                      <div class="row banner_mobile">
-                        <div>
-                           <img src="statics/img/banners/banner_logo.png">
-                        </div>
-                        <div align="center">
-                           <img src="statics/img/banners/hey_babe.png" style="padding: 10px;">
-                           <br>
-                           <h1><b>MEH INTERN</b></h1>
-                           <h3>Gracias por ser parte de Meh Girls Club!. Tenemos descuentos y regalos para tí.</h3>
-                           <br>
-                           <div class="row" style="margin-left: 35%;">
-                              <a href="#" onclick="goToNav('nav-profile-tab');">
-                                 <button type="button" class="btn" style="background-color: #eacaca;">MI PERFIL</button>
-                              </a>
-                           </div>
-                        </div>
+                        <img src="statics/img/banners/banner_mobile.jpg" style="width: 100%;">
                      </div>
                   </div>
                   <hr>
@@ -1359,68 +1356,36 @@
                            <div class="rte">
                               <br>
                               <br>
-                              <div class="row setup-panel">
-                                 <div class="col-md-2 col-6">
-                                    <a href="#step-1" type="button" class="btn btn-indigo">
-                                       <img src="/statics/img/scale/01.png" width="120px" style="border-radius: 5px;">
-                                    </a>
-                                    <p>De 0 a 750 puntos</p>
-                                 </div>
-                                 <div class="col-md-2 col-6">
-                                    <a href="#step-2" type="button" class="btn btn-default">
-                                       <img src="/statics/img/scale/02.png" width="120px" style="border-radius: 5px;">
-                                    </a>
-                                    <p>De 750 a 2000 puntos</p>
-                                 </div>
-                                 <div class="col-md-2 col-6">
-                                    <a href="#step-3" type="button" class="btn btn-default">
-                                       <img src="/statics/img/scale/03.png" width="120px" style="border-radius: 5px;">
-                                    </a>
-                                    <p>De 2000 a 5000 puntos</p>
-                                 </div>
-                                 <div class="col-md-2 col-6">
-                                    <a href="#step-4" type="button" class="btn btn-default">
-                                       <img src="/statics/img/scale/04.png" width="120px" style="border-radius: 5px;">
-                                    </a>
-                                    <p>De 5000 a 10000 puntos</p>
-                                 </div>
-                                 <div class="col-md-2 col-6">
-                                    <a href="#step-5" type="button" class="btn btn-default">
-                                       <img src="/statics/img/scale/05.png" width="120px" style="border-radius: 5px;">
-                                    </a>
-                                    <p>De 10000 a más puntos</p>
-                                 </div>
+                              <!-- setup-header -->
+                              <div class="row setup-panel" style="padding-left: 2em; padding-right: 2em;">
+                                 <select class="" id="setUpPanelSelectId" onChange="selectSetUpContent('setUpPanelSelectId');">
+                                    <option value="a-step-1">Meh intern - 0 a 750 puntos</option>
+                                    <option value="a-step-2">Meh intern - 750 a 2000 puntos</option>
+                                    <option value="a-step-3">Meh intern - 2000 a 5000 puntos</option>
+                                    <option value="a-step-4">Meh intern - 5000 a 10000 puntos</option>
+                                    <option value="a-step-5">Meh intern - 10000 a más puntos</option>
+                                 </select>
                               </div>
-                              <!-- <div class="steps-form">
+                              <div class="steps-form" style="display: none;">
                                  <div class="steps-row setup-panel">
                                     <div class="steps-step">
+                                       <a href="#step-1" type="button" id="a-step-1">1</a>
                                     </div>
                                     <div class="steps-step">
-                                       <a href="#step-2" type="button" class="btn btn-default" disabled="disabled">
-                                       <img src="/statics/img/scale/02.png" width="120px" style="border-radius: 5px;">
-                                       </a>
-                                       <p>De 750 a 2000 puntos</p>
+                                       <a href="#step-2" type="button" id="a-step-2">2</a>
                                     </div>
                                     <div class="steps-step">
-                                       <a href="#step-3" type="button" class="btn btn-default" disabled="disabled">
-                                       <img src="/statics/img/scale/03.png" width="120px" style="border-radius: 5px;">
-                                       </a>
-                                       <p>De 2000 a 5000 puntos</p>
+                                       <a href="#step-3" type="button" id="a-step-3">3</a>
                                     </div>
                                     <div class="steps-step">
-                                       <a href="#step-4" type="button" class="btn btn-default" disabled="disabled">
-                                       <img src="/statics/img/scale/04.png" width="120px" style="border-radius: 5px;">
-                                       </a>
-                                       <p>De 5000 a 10000 puntos</p>
+                                       <a href="#step-4" type="button" id="a-step-4">4</a>
                                     </div>
                                     <div class="steps-step">
-                                       <a href="#step-5" type="button" class="btn btn-default" disabled="disabled">
-                                       <img src="/statics/img/scale/05.png" width="120px" style="border-radius: 5px;">
-                                       </a>
-                                       <p>De 10000 a más puntos</p>
+                                       <a href="#step-5" type="button" id="a-step-5">5</a>
                                     </div>
                                  </div>
-                              </div> -->
+                              </div>
+                              <!-- setup-content -->
                               <form role="form" action="" method="post">
                                  <div class="row setup-content" id="step-1">
                                     <div class="col-md-2"></div>
@@ -1441,12 +1406,14 @@
                                                             <circle cx="8" cy="4.5" r="1"/>
                                                          </svg>
                                                       </i> Regalos por cumpleaños</td>
-                                                   <td>10% off</td>
+                                                   <td>20% off</td>
                                                 </tr>
                                                 <tr id="1rc" style="display: none;">
-                                                   <td style="border: 0px solid black;">Sujeto a disponibilidad de stock
+                                                   <td style="border: 0px solid black;">
+                                                      Sujeto a disponibilidad de stock
                                                       No aplica con algunos descuentos y/o promociones
-                                                      En caso no se pueda usar, contactarse con info@mehperu.com o al WA +51 952928928</td>
+                                                      Porfavor escribemos a nuestro WA +51 952928928 para poder canjear este descuento
+                                                   </td>
                                                 </tr>
                                                 <tr>
                                                    <td style="cursor: pointer;" onclick="showHide('1dv');">
@@ -1484,7 +1451,7 @@
                                                             <path d="M8.93 6.588l-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588z"/>
                                                             <circle cx="8" cy="4.5" r="1"/>
                                                          </svg>
-                                                      </i> Sorteo mensual</td>
+                                                      </i> Sorteo de giftcard mensual</td>
                                                    <td>No</td>
                                                 </tr>
                                                 <tr id="1sm" style="display: none;">
@@ -1530,12 +1497,14 @@
                                                             <circle cx="8" cy="4.5" r="1"/>
                                                          </svg>
                                                       </i> Regalos por cumpleaños</td>
-                                                   <td>10% off</td>
+                                                   <td>25% off</td>
                                                 </tr>
                                                 <tr id="2rc" style="display: none;">
-                                                   <td style="border: 0px solid black;">Sujeto a disponibilidad de stock
+                                                   <td style="border: 0px solid black;">
+                                                      Sujeto a disponibilidad de stock
                                                       No aplica con algunos descuentos y/o promociones
-                                                      En caso no se pueda usar, contactarse con info@mehperu.com o al WA +51 952928928</td>
+                                                      Porfavor escribemos a nuestro WA +51 952928928 para poder canjear este descuento
+                                                   </td>
                                                 </tr>
                                                 <tr>
                                                    <td style="cursor: pointer;" onclick="showHide('2dv');">
@@ -1560,7 +1529,7 @@
                                                             <circle cx="8" cy="4.5" r="1"/>
                                                          </svg>
                                                       </i> Acceso prioritario</td>
-                                                   <td>No</td>
+                                                   <td>Sí</td>
                                                 </tr>
                                                 <tr id="2ap" style="display: none;">
                                                    <td style="border: 0px solid black;">Acceso prioritario a pre-ventas y ventas cerradas en tienda</td>
@@ -1573,8 +1542,8 @@
                                                             <path d="M8.93 6.588l-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588z"/>
                                                             <circle cx="8" cy="4.5" r="1"/>
                                                          </svg>
-                                                      </i> Sorteo mensual</td>
-                                                   <td>Sí</td>
+                                                      </i> Sorteo de giftcard mensual</td>
+                                                   <td>No</td>
                                                 </tr>
                                                 <tr id="2sm" style="display: none;">
                                                    <td style="border: 0px solid black;">Sorteos mensuales para nuestros miembros del club.</td>
@@ -1619,12 +1588,14 @@
                                                             <circle cx="8" cy="4.5" r="1"/>
                                                          </svg>
                                                       </i> Regalos por cumpleaños</td>
-                                                   <td>15% off</td>
+                                                   <td>40% off</td>
                                                 </tr>
                                                 <tr id="3rc" style="display: none;">
-                                                   <td style="border: 0px solid black;">Sujeto a disponibilidad de stock
+                                                   <td style="border: 0px solid black;">
+                                                      Sujeto a disponibilidad de stock
                                                       No aplica con algunos descuentos y/o promociones
-                                                      En caso no se pueda usar, contactarse con info@mehperu.com o al WA +51 952928928</td>
+                                                      Porfavor escribemos a nuestro WA +51 952928928 para poder canjear este descuento
+                                                   </td>
                                                 </tr>
                                                 <tr>
                                                    <td style="cursor: pointer;" onclick="showHide('3dv');">
@@ -1662,7 +1633,7 @@
                                                             <path d="M8.93 6.588l-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588z"/>
                                                             <circle cx="8" cy="4.5" r="1"/>
                                                          </svg>
-                                                      </i> Sorteo mensual</td>
+                                                      </i> Sorteo de giftcard mensual</td>
                                                    <td>Sí</td>
                                                 </tr>
                                                 <tr id="3sm" style="display: none;">
@@ -1711,9 +1682,11 @@
                                                    <td>Prenda sorpresa</td>
                                                 </tr>
                                                 <tr id="4rc" style="display: none;">
-                                                   <td style="border: 0px solid black;">Sujeto a disponibilidad de stock
+                                                   <td style="border: 0px solid black;">
+                                                      Sujeto a disponibilidad de stock
                                                       No aplica con algunos descuentos y/o promociones
-                                                      En caso no se pueda usar, contactarse con info@mehperu.com o al WA +51 952928928</td>
+                                                      Porfavor escribemos a nuestro WA +51 952928928 para poder canjear este descuento
+                                                   </td>
                                                 </tr>
                                                 <tr>
                                                    <td style="cursor: pointer;" onclick="showHide('4dv');">
@@ -1751,7 +1724,7 @@
                                                             <path d="M8.93 6.588l-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588z"/>
                                                             <circle cx="8" cy="4.5" r="1"/>
                                                          </svg>
-                                                      </i> Sorteo mensual</td>
+                                                      </i> Sorteo de giftcard mensual</td>
                                                    <td>Sí</td>
                                                 </tr>
                                                 <tr id="4sm" style="display: none;">
@@ -1800,9 +1773,11 @@
                                                    <td>Prenda favorita (Max 149 soles)</td>
                                                 </tr>
                                                 <tr id="5rc" style="display: none;">
-                                                   <td style="border: 0px solid black;">Sujeto a disponibilidad de stock
+                                                   <td style="border: 0px solid black;">
+                                                      Sujeto a disponibilidad de stock
                                                       No aplica con algunos descuentos y/o promociones
-                                                      En caso no se pueda usar, contactarse con info@mehperu.com o al WA +51 952928928</td>
+                                                      Porfavor escribemos a nuestro WA +51 952928928 para poder canjear este descuento
+                                                   </td>
                                                 </tr>
                                                 <tr>
                                                    <td style="cursor: pointer;" onclick="showHide('5dv');">
@@ -1840,7 +1815,7 @@
                                                             <path d="M8.93 6.588l-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588z"/>
                                                             <circle cx="8" cy="4.5" r="1"/>
                                                          </svg>
-                                                      </i> Sorteo mensual</td>
+                                                      </i> Sorteo de giftcard mensual</td>
                                                    <td>Sí</td>
                                                 </tr>
                                                 <tr id="5sm" style="display: none;">
@@ -1882,7 +1857,7 @@
                                        Queremos premiar a nuestras clientas con los mejores beneficios. Gana puntos comprando en Meh y sube de nivel para obtener beneficios increibles
                                     </h2>
                                     <br>
-                                    <button type="button" class="btn" style="background-color: #eacaca; font-size: 1em;">SHOP NOW!</button>
+                                    <a type="button" href="https://mehperu.com/shop" class="btn" style="background-color: #eacaca; font-size: 1em; padding-top: 1em;">SHOP NOW!</a>
                                     <h2 style="margin-top: 1em; font-size: 1.2em;">Ademas, realiza las siguientes acciones y obten tus primeros puntos:</h2>
                                  </div>
                               </div>
@@ -1891,7 +1866,7 @@
                                  <div class="col-6 col-md-4 flip-box">
                                     <div class="flip-box-inner">
                                       <div class="flip-box-front">
-                                        <img src="/statics/img/how/01.png">
+                                        <img src="/statics/img/how/01.jpg">
                                       </div>
                                       <div class="flip-box-back" valign="middle">
                                         <h2 class="flip-box-back-font">Válido para compras en tienda y web.</h2>
@@ -1901,17 +1876,17 @@
                                  <div class="col-6 col-md-4 flip-box">
                                     <div class="flip-box-inner">
                                       <div class="flip-box-front">
-                                        <img src="/statics/img/how/02.png">
+                                        <img src="/statics/img/how/02.jpg">
                                       </div>
                                       <div class="flip-box-back" valign="middle">
-                                        <h2 class="flip-box-back-font">Seguir a @mehperu en Instagram</h2>
+                                        <h2 class="flip-box-back-font">Seguir a @mehperu en Instagram.</h2>
                                       </div>
                                     </div>
                                  </div>
                                  <div class="col-6 col-md-4 flip-box">
                                     <div class="flip-box-inner">
                                       <div class="flip-box-front">
-                                        <img src="/statics/img/how/03.png">
+                                        <img src="/statics/img/how/03.jpg">
                                       </div>
                                       <div class="flip-box-back" valign="middle">
                                         <h2 class="flip-box-back-font">Válido para compartir via whatsapp o por instagram.</h2>
@@ -1921,17 +1896,17 @@
                                  <div class="col-6 col-md-4 flip-box">
                                     <div class="flip-box-inner">
                                       <div class="flip-box-front">
-                                        <img src="/statics/img/how/04.png">
+                                        <img src="/statics/img/how/04.jpg">
                                       </div>
                                       <div class="flip-box-back" valign="middle">
-                                        <h2 class="flip-box-back-font">No olvides registrar tu cumpleanos en tu perfil</h2>
+                                        <h2 class="flip-box-back-font">No olvides registrar tu cumpleanos en tu perfil.</h2>
                                       </div>
                                     </div>
                                  </div>
                                  <div class="col-6 col-md-4 flip-box">
                                     <div class="flip-box-inner">
                                       <div class="flip-box-front">
-                                        <img src="/statics/img/how/05.png">
+                                        <img src="/statics/img/how/05.jpg">
                                       </div>
                                       <div class="flip-box-back" valign="middle">
                                         <h2 class="flip-box-back-font">Sólo tienes que etiquetarnos con un Outfit meh y entraras al concurso mensual automaticamente.</h2>
@@ -1941,20 +1916,30 @@
                                  <div class="col-6 col-md-4 flip-box">
                                     <div class="flip-box-inner">
                                       <div class="flip-box-front">
-                                        <img src="/statics/img/how/06.png">
+                                        <img src="/statics/img/how/06.jpg">
                                       </div>
                                       <div class="flip-box-back" valign="middle">
-                                        <h2 class="flip-box-back-font">Valido sólo por 1 vez y si se usa ropa de Meh Peru</h2>
+                                        <h2 class="flip-box-back-font">Valido sólo por 1 vez y si se usa ropa de Meh Perú.</h2>
                                       </div>
                                     </div>
                                  </div>
                                  <div class="col-6 col-md-4 flip-box">
                                     <div class="flip-box-inner">
                                       <div class="flip-box-front">
-                                        <img src="/statics/img/how/07.png">
+                                        <img src="/statics/img/how/07.jpg">
                                       </div>
                                       <div class="flip-box-back" valign="middle">
-                                        <h2 class="flip-box-back-font">Crea tu cuenta y empieza con 50 puntos Meh</h2>
+                                        <h2 class="flip-box-back-font">Crea tu cuenta y empieza con 50 puntos Meh.</h2>
+                                      </div>
+                                    </div>
+                                 </div>
+                                 <div class="col-6 col-md-4 flip-box">
+                                    <div class="flip-box-inner">
+                                      <div class="flip-box-front">
+                                        <img src="/statics/img/how/08.jpg">
+                                      </div>
+                                      <div class="flip-box-back" valign="middle">
+                                        <h2 class="flip-box-back-font">Válido por la primera compra de cada amigo que invites.</h2>
                                       </div>
                                     </div>
                                  </div>
@@ -2046,7 +2031,7 @@
                                        </div>
                                     </div>
                                  </div>
-                                 <!-- <div class="col-6 col-md-4 flip-box">
+                                 <div class="col-6 col-md-4 flip-box">
                                     <div class="flip-box-inner">
                                       <div class="flip-box-front">
                                         <img src="/statics/img/benefits/07.png">
@@ -2055,7 +2040,7 @@
                                         <h3 class="flip-box-back-font">Recibe tu par de zapatos favoritos en tu próxima compra</h3>
                                       </div>
                                     </div>
-                                 </div> -->
+                                 </div>
                                  <div class="col-6 col-md-4 flip-box">
                                     <div class="flip-box-inner">
                                       <div class="flip-box-front">
@@ -2099,23 +2084,6 @@
       <div id="shopify-section-footer" class="shopify-section">
          <footer class="mobile_footer site-footer small--text-center" role="contentinfo" style="background: #f7f2f0;">
             <div class="wrapper">
-               <div class="grid">
-                  <div class="grid__item text-center">
-                     <h5>¡Suscribete para no perderte ningun nuevos lanzamientos, liquidaciones y más!</h5>
-                     <div class="form-vertical" align="center">
-                        <form method="post" action="/contact" id="contact_form" accept-charset="UTF-8" class="contact-form">
-                           <input type="hidden" name="form_type" value="customer"><input type="hidden" name="utf8" value="✓">
-                           <input type="hidden" name="contact[tags]" value="newsletter">
-                           <div class="input-group" style="max-width: 360px;">
-                              <input type="email" value="renatomoquillaza@gmail.com" placeholder="su-email@ejemplo.com" name="contact[email]" id="Email" class="input-group-field" aria-label="su-email@ejemplo.com" autocorrect="off" autocapitalize="off">
-                              <br>
-                              <span class="input-group-btn"></span>
-                           </div>
-                        </form>
-                     </div>
-                  </div>
-               </div>
-               <br>
                <div class="grid">
                   <div class="grid__item text-center">
                      <a href="https://mehperu.com/pages/preguntas-frecuentes-%F0%9F%92%AD" style="margin-right: 10px">PREGUNTAS FRECUENTES  🦋</a>
@@ -2286,12 +2254,11 @@
                      nextStepWizard.removeAttr('disabled').trigger('click');
              });
          
-             $('div.setup-panel div a.btn-indigo').trigger('click');
+             $('#a-step-1').trigger('click');
             //  $('div.setup-panel div').trigger('click');
          });
            
       </script>
-      <script src="https://cdn.shopify.com/s/files/1/0025/5308/6019/t/10/assets/theme.js?v=12313358220519712709" type="text/javascript"></script>
    
       <script type="text/javascript">
          if(window.location.search.indexOf('selector_mode') > -1){
@@ -2355,6 +2322,25 @@
                 targetElement.click();
             }
         }
+
+        function selectSetUpContent(elementId) {
+            var elementById = document.getElementById(elementId);
+            if (elementById != null) {
+               const value_ = elementById.value;
+               $('#' + value_).trigger('click');;
+            }
+         }
+
+         function MobileNavTriggerEvent() {
+            const MobileNav = document.getElementById('MobileNav');
+            if (MobileNav != null) {
+               if (MobileNav.style.display == 'none') {
+                  MobileNav.style.display = 'block';
+               } else {
+                  MobileNav.style.display = 'none';
+               }
+            }
+         }
 
         if (userId != null) { 
             // con sesión
