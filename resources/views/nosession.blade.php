@@ -1360,38 +1360,36 @@
                               <br>
                               <br>
                               <div class="row setup-panel">
-                                 <div class="col-md-1"></div>
-                                 <div class="col-md-2">
+                                 <div class="col-md-2 col-6">
                                     <a href="#step-1" type="button" class="btn btn-indigo">
                                        <img src="/statics/img/scale/01.png" width="120px" style="border-radius: 5px;">
                                     </a>
                                     <p>De 0 a 750 puntos</p>
                                  </div>
-                                 <div class="col-md-2">
+                                 <div class="col-md-2 col-6">
                                     <a href="#step-2" type="button" class="btn btn-default">
                                        <img src="/statics/img/scale/02.png" width="120px" style="border-radius: 5px;">
                                     </a>
                                     <p>De 750 a 2000 puntos</p>
                                  </div>
-                                 <div class="col-md-2">
+                                 <div class="col-md-2 col-6">
                                     <a href="#step-3" type="button" class="btn btn-default">
                                        <img src="/statics/img/scale/03.png" width="120px" style="border-radius: 5px;">
                                     </a>
                                     <p>De 2000 a 5000 puntos</p>
                                  </div>
-                                 <div class="col-md-2">
+                                 <div class="col-md-2 col-6">
                                     <a href="#step-4" type="button" class="btn btn-default">
                                        <img src="/statics/img/scale/04.png" width="120px" style="border-radius: 5px;">
                                     </a>
                                     <p>De 5000 a 10000 puntos</p>
                                  </div>
-                                 <div class="col-md-2">
+                                 <div class="col-md-2 col-6">
                                     <a href="#step-5" type="button" class="btn btn-default">
                                        <img src="/statics/img/scale/05.png" width="120px" style="border-radius: 5px;">
                                     </a>
                                     <p>De 10000 a más puntos</p>
                                  </div>
-                                 <div class="col-md-1"></div>
                               </div>
                               <!-- <div class="steps-form">
                                  <div class="steps-row setup-panel">
@@ -2048,7 +2046,7 @@
                                        </div>
                                     </div>
                                  </div>
-                                 <div class="col-6 col-md-4 flip-box">
+                                 <!-- <div class="col-6 col-md-4 flip-box">
                                     <div class="flip-box-inner">
                                       <div class="flip-box-front">
                                         <img src="/statics/img/benefits/07.png">
@@ -2057,7 +2055,7 @@
                                         <h3 class="flip-box-back-font">Recibe tu par de zapatos favoritos en tu próxima compra</h3>
                                       </div>
                                     </div>
-                                 </div>
+                                 </div> -->
                                  <div class="col-6 col-md-4 flip-box">
                                     <div class="flip-box-inner">
                                       <div class="flip-box-front">
