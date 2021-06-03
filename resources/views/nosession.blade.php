@@ -113,7 +113,6 @@
          }
       </style>
       
-      <script src="https://bundles.boldapps.net/js/bundles.js" type="text/javascript"></script>
       <link href="https://cdn.shopify.com/s/files/1/0025/5308/6019/t/10/assets/bold-bundles.css?v=9324218472536144910" rel="stylesheet" type="text/css" media="all">
       
       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
@@ -131,60 +130,6 @@
          .center-block-modal {
          margin-top: -10%;
          }
-         @font-face{
-         font-family: 'Montserrat-SemiBold';
-         src: url(//cdn.shopify.com/s/files/1/0025/5308/6019/t/10/assets/Montserrat-SemiBold.ttf?v=14271901716278814159);
-         [font-weight:600];
-         }
-         @font-face{
-         font-family: 'Montserrat-Light';
-         src: url(//cdn.shopify.com/s/files/1/0025/5308/6019/t/10/assets/Montserrat-Light.ttf?v=6941645560701291334);
-         [font-weight:300];
-         }
-         @font-face{
-         font-family: 'Montserrat-Medium';
-         src: url(//cdn.shopify.com/s/files/1/0025/5308/6019/t/10/assets/Montserrat-Medium.ttf?v=6341847464687179594);
-         [font-weight:500];
-         }
-         .montserratBold {
-            font-family: 'Montserrat-SemiBold';
-            font-weight: 600;
-            margin-top: 0.5em;
-            font-size: 20px;
-         }
-         .montserratBoldP {
-            font-family: 'Montserrat-SemiBold';
-            font-weight: 600;
-            margin-top: 0.5em;
-            font-size: 10px;
-         }
-         .montserratLight {
-            font-family: 'Montserrat-Light';
-            font-weight: 300;
-         }
-         .montserratLightP {
-            font-family: 'Montserrat-Light';
-            font-weight: 300;
-            font-size: 10px;
-            margin: 0px;
-         }
-         .montserratMedium {
-            font-family: 'Montserrat-Medium';
-            font-weight: 500;
-            color: #706f6f;
-         }
-         .montserratMediumP {
-            font-family: 'Montserrat-Medium';
-            font-weight: 500;
-            color: #706f6f;              
-            font-size: 15px;
-         }
-         .montserratMediumPM {
-            font-family: 'Montserrat-Medium';
-            font-weight: 500;
-            color: #706f6f;              
-            font-size: 12px;
-         }
          .banner_full{
             display:flex;
          }
@@ -199,6 +144,10 @@
             /* border: 1px solid #f1f1f1; */
             margin-bottom: 10px;
             perspective: 1000px; /* Remove this if you don't want the 3D effect */
+         }
+         .flip-box-back-font{
+            font-size: 1.2em;
+            padding: 5em;
          }
 
          /* This container is needed to position the front and back side */
@@ -245,7 +194,7 @@
                display:block;
             }
             .flip-box-back-font{
-               font-size: 12px;
+               font-size: 1em;
             }
             .flip-box{
                height: 60px;
@@ -254,9 +203,7 @@
       </style>
       
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js" async="true"></script>
       <link href="https://app-spinner.carecart.io/public/app/css/front-store-spinner.css?v=1.5.8" type="text/css" rel="stylesheet">
-      <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
       <style>.sweet-alert fieldset {
          display: none;
          }
@@ -1034,65 +981,7 @@
          
       </style>
       <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
-      
-      
       <link rel="stylesheet" href="/statics/fonts/Montserrat/Montserrat-Regular.ttf">
-      <script src="vendor/bootstrap/js/bootstrap.js"></script>
-      <script>
-         $(document).ready(function () {
-             var navListItems = $('div.setup-panel div a'),
-                 allWells = $('.setup-content'),
-                 allNextBtn = $('.nextBtn'),
-                 allPrevBtn = $('.prevBtn');
-         
-             allWells.hide();
-         
-             navListItems.click(function (e) {
-                 e.preventDefault();
-                 var $target = $($(this).attr('href')),
-                     $item = $(this);
-         
-                 if (!$item.hasClass('disabled')) {
-                     // navListItems.removeClass('btn-indigo').addClass('btn-default');
-                     // $item.addClass('btn-indigo');
-                     allWells.hide();
-                     $target.show();
-                     $target.find('input:eq(0)').focus();
-                 }
-             });
-         
-             allPrevBtn.click(function(){
-                 var curStep = $(this).closest(".setup-content"),
-                     curStepBtn = curStep.attr("id"),
-                     prevStepSteps = $('div.setup-panel div a[href="#' + curStepBtn + '"]').parent().prev().children("a");
-         
-                     prevStepSteps.removeAttr('disabled').trigger('click');
-             });
-         
-             allNextBtn.click(function(){
-                 var curStep = $(this).closest(".setup-content"),
-                     curStepBtn = curStep.attr("id"),
-                     nextStepWizard = $('div.setup-panel div a[href="#' + curStepBtn + '"]').parent().next().children("a"),
-                     curInputs = curStep.find("input[type='text'],input[type='url']"),
-                     isValid = true;
-         
-                 $(".form-group").removeClass("has-error");
-                 for(var i=0; i< curInputs.length; i++){
-                     if (!curInputs[i].validity.valid){
-                         isValid = false;
-                         $(curInputs[i]).closest(".form-group").addClass("has-error");
-                     }
-                 }
-         
-                 if (isValid)
-                     nextStepWizard.removeAttr('disabled').trigger('click');
-             });
-         
-             $('div.setup-panel div a.btn-indigo').trigger('click');
-            //  $('div.setup-panel div').trigger('click');
-         });
-           
-      </script>
    </head>
    <body id="meh-girls-club" class="customer-logged-in template-page" style="font-family: 'Armata'; font-size: 12px;">
       <div id="shopify-section-header" class="shopify-section">
@@ -1303,12 +1192,14 @@
                         <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
                            <div class="rte">
                               <br>
-                              <h3 class="font-weight-bold pl-0 my-4" align="center"><strong id="personalInfoH3">Hola</strong></h3>
-                              <h4 class="pl-0 my-4" align="center">¡Inicia sesión o crea una cuenta en nuestra tienda para más opciones!</h4>
+                              <h3 class="font-weight-bold pl-0 my-4" style="font-size: 1.2em;" align="center">
+                                 <strong>Inicia sesión para ver tu información</strong>
+                              </h3>
+                              <h4 class="pl-0 my-4" style="font-size: 1em;" align="center">¡Inicia sesión o crea una cuenta en nuestra tienda para más opciones!</h4>
 
                               <div class="form-group row" style="margin-bottom: 0rem;">
                                 <div class="col-sm-12" align="center">
-                                    <button class="btn" type="button" style="background-color: #eacaca;" onclick="goToNav('liMiAccount');">Iniciar sesión</button>
+                                    <button class="btn" type="button" style="background-color: #eacaca; font-size: 1em;" onclick="goToNav('liMiAccount');">Iniciar sesión</button>
                                 </div>
                               </div>
                               <div class="row" id="personalInfoTab">
@@ -1467,15 +1358,44 @@
                         <div class="tab-pane fade" id="nav-meh-girls-club" role="tabpanel" aria-labelledby="nav-meh-girls-club-tab">
                            <div class="rte">
                               <br>
-                              <!-- <h3 class="font-weight-bold pl-0 my-4" align="center"><strong id="mehPointsH3">MEH INTERN - 246 puntos</strong></h3> -->
                               <br>
-                              <div class="steps-form">
+                              <div class="row setup-panel">
+                                 <div class="col-md-1"></div>
+                                 <div class="col-md-2">
+                                    <a href="#step-1" type="button" class="btn btn-indigo">
+                                       <img src="/statics/img/scale/01.png" width="120px" style="border-radius: 5px;">
+                                    </a>
+                                    <p>De 0 a 750 puntos</p>
+                                 </div>
+                                 <div class="col-md-2">
+                                    <a href="#step-2" type="button" class="btn btn-default">
+                                       <img src="/statics/img/scale/02.png" width="120px" style="border-radius: 5px;">
+                                    </a>
+                                    <p>De 750 a 2000 puntos</p>
+                                 </div>
+                                 <div class="col-md-2">
+                                    <a href="#step-3" type="button" class="btn btn-default">
+                                       <img src="/statics/img/scale/03.png" width="120px" style="border-radius: 5px;">
+                                    </a>
+                                    <p>De 2000 a 5000 puntos</p>
+                                 </div>
+                                 <div class="col-md-2">
+                                    <a href="#step-4" type="button" class="btn btn-default">
+                                       <img src="/statics/img/scale/04.png" width="120px" style="border-radius: 5px;">
+                                    </a>
+                                    <p>De 5000 a 10000 puntos</p>
+                                 </div>
+                                 <div class="col-md-2">
+                                    <a href="#step-5" type="button" class="btn btn-default">
+                                       <img src="/statics/img/scale/05.png" width="120px" style="border-radius: 5px;">
+                                    </a>
+                                    <p>De 10000 a más puntos</p>
+                                 </div>
+                                 <div class="col-md-1"></div>
+                              </div>
+                              <!-- <div class="steps-form">
                                  <div class="steps-row setup-panel">
                                     <div class="steps-step">
-                                       <a href="#step-1" type="button" class="btn btn-indigo">
-                                       <img src="/statics/img/scale/01.png" width="120px" style="border-radius: 5px;">
-                                       </a>
-                                       <p>De 0 a 750 puntos</p>
                                     </div>
                                     <div class="steps-step">
                                        <a href="#step-2" type="button" class="btn btn-default" disabled="disabled">
@@ -1502,7 +1422,7 @@
                                        <p>De 10000 a más puntos</p>
                                     </div>
                                  </div>
-                              </div>
+                              </div> -->
                               <form role="form" action="" method="post">
                                  <div class="row setup-content" id="step-1">
                                     <div class="col-md-2"></div>
@@ -1512,7 +1432,6 @@
                                              <thead class="table-dark">
                                                 <th>Beneficios</th>
                                                 <th>Disponibilidad</th>
-                                                <th>Condiciones</th>
                                              </thead>
                                              <tbody>
                                                 <tr>
@@ -1525,12 +1444,11 @@
                                                          </svg>
                                                       </i> Regalos por cumpleaños</td>
                                                    <td>10% off</td>
-                                                   <td>Sujeto a disponibilidad de stock
-                                                      No aplica con algunos descuentos y/o promociones
-                                                      En caso no se pueda usar, contactarse con info@mehperu.com o al WA +51 952928928</td>
                                                 </tr>
                                                 <tr id="1rc" style="display: none;">
-                                                   <td style="border: 0px solid black;">Detalle de regalos por cumpleaños</td>
+                                                   <td style="border: 0px solid black;">Sujeto a disponibilidad de stock
+                                                      No aplica con algunos descuentos y/o promociones
+                                                      En caso no se pueda usar, contactarse con info@mehperu.com o al WA +51 952928928</td>
                                                 </tr>
                                                 <tr>
                                                    <td style="cursor: pointer;" onclick="showHide('1dv');">
@@ -1542,10 +1460,9 @@
                                                          </svg>
                                                       </i> Descuento vitalicio</td>
                                                    <td>No</td>
-                                                   <td>No aplica con otros descuentos y/o promociones</td>
                                                 </tr>
                                                 <tr id="1dv" style="display: none;">
-                                                   <td style="border: 0px solid black;">Detalle de descuento vitalicio</td>
+                                                   <td style="border: 0px solid black;">No aplica con otros descuentos y/o promociones</td>
                                                 </tr>
                                                 <tr>
                                                    <td style="cursor: pointer;" onclick="showHide('1ap');">
@@ -1557,12 +1474,9 @@
                                                          </svg>
                                                       </i> Acceso prioritario</td>
                                                    <td>No</td>
-                                                   <td>
-                                                      Acceso prioritario a pre-ventas y ventas cerradas en tienda
-                                                   </td>
                                                 </tr>
                                                 <tr id="1ap" style="display: none;">
-                                                   <td style="border: 0px solid black;">Detalle de acceso prioritario</td>
+                                                   <td style="border: 0px solid black;">Acceso prioritario a pre-ventas y ventas cerradas en tienda</td>
                                                 </tr>
                                                 <tr>
                                                    <td style="cursor: pointer;" onclick="showHide('1sm');">
@@ -1574,10 +1488,9 @@
                                                          </svg>
                                                       </i> Sorteo mensual</td>
                                                    <td>No</td>
-                                                   <td>Sorteos mensuales para nuestros miembros del club.</td>
                                                 </tr>
                                                 <tr id="1sm" style="display: none;">
-                                                   <td style="border: 0px solid black;">Detalle de sorteo mensual</td>
+                                                   <td style="border: 0px solid black;">Sorteos mensuales para nuestros miembros del club.</td>
                                                 </tr>
                                                 <tr>
                                                    <td style="cursor: pointer;" onclick="showHide('1sv');">
@@ -1589,11 +1502,10 @@
                                                          </svg>
                                                       </i> Free shipping vitalicio</td>
                                                    <td>No</td>
-                                                   <td>Válido para todos los envíos nacionales
-                                                      Envío prioritario sujeto a disponibilidad y fechas</td>
                                                 </tr>
                                                 <tr id="1sv" style="display: none;">
-                                                   <td style="border: 0px solid black;">Detalle de shipping vitalicio</td>
+                                                   <td style="border: 0px solid black;">Válido para todos los envíos nacionales
+                                                      Envío prioritario sujeto a disponibilidad y fechas</td>
                                                 </tr>
                                              </tbody>
                                           </table>
@@ -1609,7 +1521,6 @@
                                              <thead class="table-dark">
                                                 <th>Beneficios</th>
                                                 <th>Disponibilidad</th>
-                                                <th>Condiciones</th>
                                              </thead>
                                              <tbody>
                                                 <tr>
@@ -1622,12 +1533,11 @@
                                                          </svg>
                                                       </i> Regalos por cumpleaños</td>
                                                    <td>10% off</td>
-                                                   <td>Sujeto a disponibilidad de stock
-                                                      No aplica con algunos descuentos y/o promociones
-                                                      En caso no se pueda usar, contactarse con info@mehperu.com o al WA +51 952928928</td>
                                                 </tr>
                                                 <tr id="2rc" style="display: none;">
-                                                   <td style="border: 0px solid black;">Detalle de regalos por cumpleaños</td>
+                                                   <td style="border: 0px solid black;">Sujeto a disponibilidad de stock
+                                                      No aplica con algunos descuentos y/o promociones
+                                                      En caso no se pueda usar, contactarse con info@mehperu.com o al WA +51 952928928</td>
                                                 </tr>
                                                 <tr>
                                                    <td style="cursor: pointer;" onclick="showHide('2dv');">
@@ -1639,10 +1549,9 @@
                                                          </svg>
                                                       </i> Descuento vitalicio</td>
                                                    <td>No</td>
-                                                   <td>No aplica con otros descuentos y/o promociones</td>
                                                 </tr>
                                                 <tr id="2dv" style="display: none;">
-                                                   <td style="border: 0px solid black;">Detalle de descuento vitalicio</td>
+                                                   <td style="border: 0px solid black;">No aplica con otros descuentos y/o promociones</td>
                                                 </tr>
                                                 <tr>
                                                    <td style="cursor: pointer;" onclick="showHide('2ap');">
@@ -1654,12 +1563,9 @@
                                                          </svg>
                                                       </i> Acceso prioritario</td>
                                                    <td>No</td>
-                                                   <td>
-                                                      Acceso prioritario a pre-ventas y ventas cerradas en tienda
-                                                   </td>
                                                 </tr>
                                                 <tr id="2ap" style="display: none;">
-                                                   <td style="border: 0px solid black;">Detalle de acceso prioritario</td>
+                                                   <td style="border: 0px solid black;">Acceso prioritario a pre-ventas y ventas cerradas en tienda</td>
                                                 </tr>
                                                 <tr>
                                                    <td style="cursor: pointer;" onclick="showHide('2sm');">
@@ -1671,10 +1577,9 @@
                                                          </svg>
                                                       </i> Sorteo mensual</td>
                                                    <td>Sí</td>
-                                                   <td>Sorteos mensuales para nuestros miembros del club.</td>
                                                 </tr>
                                                 <tr id="2sm" style="display: none;">
-                                                   <td style="border: 0px solid black;">Detalle de sorteo mensual</td>
+                                                   <td style="border: 0px solid black;">Sorteos mensuales para nuestros miembros del club.</td>
                                                 </tr>
                                                 <tr>
                                                    <td style="cursor: pointer;" onclick="showHide('2sv');">
@@ -1686,11 +1591,10 @@
                                                          </svg>
                                                       </i> Free shipping vitalicio</td>
                                                    <td>No</td>
-                                                   <td>Válido para todos los envíos nacionales
-                                                      Envío prioritario sujeto a disponibilidad y fechas</td>
                                                 </tr>
                                                 <tr id="2sv" style="display: none;">
-                                                   <td style="border: 0px solid black;">Detalle de shipping vitalicio</td>
+                                                   <td style="border: 0px solid black;">Válido para todos los envíos nacionales
+                                                      Envío prioritario sujeto a disponibilidad y fechas</td>
                                                 </tr>
                                              </tbody>
                                           </table>
@@ -1706,7 +1610,6 @@
                                              <thead class="table-dark">
                                                 <th>Beneficios</th>
                                                 <th>Disponibilidad</th>
-                                                <th>Condiciones</th>
                                              </thead>
                                              <tbody>
                                                 <tr>
@@ -1719,12 +1622,11 @@
                                                          </svg>
                                                       </i> Regalos por cumpleaños</td>
                                                    <td>15% off</td>
-                                                   <td>Sujeto a disponibilidad de stock
-                                                      No aplica con algunos descuentos y/o promociones
-                                                      En caso no se pueda usar, contactarse con info@mehperu.com o al WA +51 952928928</td>
                                                 </tr>
                                                 <tr id="3rc" style="display: none;">
-                                                   <td style="border: 0px solid black;">Detalle de regalos por cumpleaños</td>
+                                                   <td style="border: 0px solid black;">Sujeto a disponibilidad de stock
+                                                      No aplica con algunos descuentos y/o promociones
+                                                      En caso no se pueda usar, contactarse con info@mehperu.com o al WA +51 952928928</td>
                                                 </tr>
                                                 <tr>
                                                    <td style="cursor: pointer;" onclick="showHide('3dv');">
@@ -1736,10 +1638,9 @@
                                                          </svg>
                                                       </i> Descuento vitalicio</td>
                                                    <td>15% off</td>
-                                                   <td>No aplica con otros descuentos y/o promociones</td>
                                                 </tr>
                                                 <tr id="3dv" style="display: none;">
-                                                   <td style="border: 0px solid black;">Detalle de descuento vitalicio</td>
+                                                   <td style="border: 0px solid black;">No aplica con otros descuentos y/o promociones</td>
                                                 </tr>
                                                 <tr>
                                                    <td style="cursor: pointer;" onclick="showHide('3ap');">
@@ -1751,12 +1652,9 @@
                                                          </svg>
                                                       </i> Acceso prioritario</td>
                                                    <td>Sí</td>
-                                                   <td>
-                                                      Acceso prioritario a pre-ventas y ventas cerradas en tienda
-                                                   </td>
                                                 </tr>
                                                 <tr id="3ap" style="display: none;">
-                                                   <td style="border: 0px solid black;">Detalle de acceso prioritario</td>
+                                                   <td style="border: 0px solid black;">Acceso prioritario a pre-ventas y ventas cerradas en tienda</td>
                                                 </tr>
                                                 <tr>
                                                    <td style="cursor: pointer;" onclick="showHide('3sm');">
@@ -1768,10 +1666,9 @@
                                                          </svg>
                                                       </i> Sorteo mensual</td>
                                                    <td>Sí</td>
-                                                   <td>Sorteos mensuales para nuestros miembros del club.</td>
                                                 </tr>
                                                 <tr id="3sm" style="display: none;">
-                                                   <td style="border: 0px solid black;">Detalle de sorteo mensual</td>
+                                                   <td style="border: 0px solid black;">Sorteos mensuales para nuestros miembros del club.</td>
                                                 </tr>
                                                 <tr>
                                                    <td style="cursor: pointer;" onclick="showHide('3sv');">
@@ -1783,11 +1680,10 @@
                                                          </svg>
                                                       </i> Free shipping vitalicio</td>
                                                    <td>No</td>
-                                                   <td>Válido para todos los envíos nacionales
-                                                      Envío prioritario sujeto a disponibilidad y fechas</td>
                                                 </tr>
                                                 <tr id="3sv" style="display: none;">
-                                                   <td style="border: 0px solid black;">Detalle de shipping vitalicio</td>
+                                                   <td style="border: 0px solid black;">Válido para todos los envíos nacionales
+                                                      Envío prioritario sujeto a disponibilidad y fechas</td>
                                                 </tr>
                                              </tbody>
                                           </table>
@@ -1803,7 +1699,6 @@
                                              <thead class="table-dark">
                                                 <th>Beneficios</th>
                                                 <th>Disponibilidad</th>
-                                                <th>Condiciones</th>
                                              </thead>
                                              <tbody>
                                                 <tr>
@@ -1816,12 +1711,11 @@
                                                          </svg>
                                                       </i> Regalos por cumpleaños</td>
                                                    <td>Prenda sorpresa</td>
-                                                   <td>Sujeto a disponibilidad de stock
-                                                      No aplica con algunos descuentos y/o promociones
-                                                      En caso no se pueda usar, contactarse con info@mehperu.com o al WA +51 952928928</td>
                                                 </tr>
                                                 <tr id="4rc" style="display: none;">
-                                                   <td style="border: 0px solid black;">Detalle de regalos por cumpleaños</td>
+                                                   <td style="border: 0px solid black;">Sujeto a disponibilidad de stock
+                                                      No aplica con algunos descuentos y/o promociones
+                                                      En caso no se pueda usar, contactarse con info@mehperu.com o al WA +51 952928928</td>
                                                 </tr>
                                                 <tr>
                                                    <td style="cursor: pointer;" onclick="showHide('4dv');">
@@ -1833,10 +1727,9 @@
                                                          </svg>
                                                       </i> Descuento vitalicio</td>
                                                    <td>20% off</td>
-                                                   <td>No aplica con otros descuentos y/o promociones</td>
                                                 </tr>
                                                 <tr id="4dv" style="display: none;">
-                                                   <td style="border: 0px solid black;">Detalle de descuento vitalicio</td>
+                                                   <td style="border: 0px solid black;">No aplica con otros descuentos y/o promociones</td>
                                                 </tr>
                                                 <tr>
                                                    <td style="cursor: pointer;" onclick="showHide('4ap');">
@@ -1848,12 +1741,9 @@
                                                          </svg>
                                                       </i> Acceso prioritario</td>
                                                    <td>Sí</td>
-                                                   <td>
-                                                      Acceso prioritario a pre-ventas y ventas cerradas en tienda
-                                                   </td>
                                                 </tr>
                                                 <tr id="4ap" style="display: none;">
-                                                   <td style="border: 0px solid black;">Detalle de acceso prioritario</td>
+                                                   <td style="border: 0px solid black;">Acceso prioritario a pre-ventas y ventas cerradas en tienda</td>
                                                 </tr>
                                                 <tr>
                                                    <td style="cursor: pointer;" onclick="showHide('4sm');">
@@ -1865,10 +1755,9 @@
                                                          </svg>
                                                       </i> Sorteo mensual</td>
                                                    <td>Sí</td>
-                                                   <td>Sorteos mensuales para nuestros miembros del club.</td>
                                                 </tr>
                                                 <tr id="4sm" style="display: none;">
-                                                   <td style="border: 0px solid black;">Detalle de sorteo mensual</td>
+                                                   <td style="border: 0px solid black;">Sorteos mensuales para nuestros miembros del club.</td>
                                                 </tr>
                                                 <tr>
                                                    <td style="cursor: pointer;" onclick="showHide('4sv');">
@@ -1880,11 +1769,10 @@
                                                          </svg>
                                                       </i> Free shipping vitalicio</td>
                                                    <td>No</td>
-                                                   <td>Válido para todos los envíos nacionales
-                                                      Envío prioritario sujeto a disponibilidad y fechas</td>
                                                 </tr>
                                                 <tr id="4sv" style="display: none;">
-                                                   <td style="border: 0px solid black;">Detalle de shipping vitalicio</td>
+                                                   <td style="border: 0px solid black;">Válido para todos los envíos nacionales
+                                                      Envío prioritario sujeto a disponibilidad y fechas</td>
                                                 </tr>
                                              </tbody>
                                           </table>
@@ -1900,7 +1788,6 @@
                                              <thead class="table-dark">
                                                 <th>Beneficios</th>
                                                 <th>Disponibilidad</th>
-                                                <th>Condiciones</th>
                                              </thead>
                                              <tbody>
                                                 <tr>
@@ -1913,12 +1800,11 @@
                                                          </svg>
                                                       </i> Regalos por cumpleaños</td>
                                                    <td>Prenda favorita (Max 149 soles)</td>
-                                                   <td>Sujeto a disponibilidad de stock
-                                                      No aplica con algunos descuentos y/o promociones
-                                                      En caso no se pueda usar, contactarse con info@mehperu.com o al WA +51 952928928</td>
                                                 </tr>
                                                 <tr id="5rc" style="display: none;">
-                                                   <td style="border: 0px solid black;">Detalle de regalos por cumpleaños</td>
+                                                   <td style="border: 0px solid black;">Sujeto a disponibilidad de stock
+                                                      No aplica con algunos descuentos y/o promociones
+                                                      En caso no se pueda usar, contactarse con info@mehperu.com o al WA +51 952928928</td>
                                                 </tr>
                                                 <tr>
                                                    <td style="cursor: pointer;" onclick="showHide('5dv');">
@@ -1930,10 +1816,9 @@
                                                          </svg>
                                                       </i> Descuento vitalicio</td>
                                                    <td>25% off</td>
-                                                   <td>No aplica con otros descuentos y/o promociones</td>
                                                 </tr>
                                                 <tr id="5dv" style="display: none;">
-                                                   <td style="border: 0px solid black;">Detalle de descuento vitalicio</td>
+                                                   <td style="border: 0px solid black;">No aplica con otros descuentos y/o promociones</td>
                                                 </tr>
                                                 <tr>
                                                    <td style="cursor: pointer;" onclick="showHide('5ap');">
@@ -1945,12 +1830,9 @@
                                                          </svg>
                                                       </i> Acceso prioritario</td>
                                                    <td>Sí</td>
-                                                   <td>
-                                                      Acceso prioritario a pre-ventas y ventas cerradas en tienda
-                                                   </td>
                                                 </tr>
                                                 <tr id="5ap" style="display: none;">
-                                                   <td style="border: 0px solid black;">Detalle de acceso prioritario</td>
+                                                   <td style="border: 0px solid black;">Acceso prioritario a pre-ventas y ventas cerradas en tienda</td>
                                                 </tr>
                                                 <tr>
                                                    <td style="cursor: pointer;" onclick="showHide('5sm');">
@@ -1962,10 +1844,9 @@
                                                          </svg>
                                                       </i> Sorteo mensual</td>
                                                    <td>Sí</td>
-                                                   <td>Sorteos mensuales para nuestros miembros del club.</td>
                                                 </tr>
                                                 <tr id="5sm" style="display: none;">
-                                                   <td style="border: 0px solid black;">Detalle de sorteo mensual</td>
+                                                   <td style="border: 0px solid black;">Sorteos mensuales para nuestros miembros del club.</td>
                                                 </tr>
                                                 <tr>
                                                    <td style="cursor: pointer;" onclick="showHide('5sv');">
@@ -1977,11 +1858,10 @@
                                                          </svg>
                                                       </i> Free shipping vitalicio</td>
                                                    <td>Sí</td>
-                                                   <td>Válido para todos los envíos nacionales
-                                                      Envío prioritario sujeto a disponibilidad y fechas</td>
                                                 </tr>
                                                 <tr id="5sv" style="display: none;">
-                                                   <td style="border: 0px solid black;">Detalle de shipping vitalicio</td>
+                                                   <td style="border: 0px solid black;">Válido para todos los envíos nacionales
+                                                      Envío prioritario sujeto a disponibilidad y fechas</td>
                                                 </tr>
                                              </tbody>
                                           </table>
@@ -2004,8 +1884,8 @@
                                        Queremos premiar a nuestras clientas con los mejores beneficios. Gana puntos comprando en Meh y sube de nivel para obtener beneficios increibles
                                     </h2>
                                     <br>
-                                    <button type="button" class="btn"  style="background-color: #eacaca;">SHOP NOW GOGO!</button>
-                                    <h2 style="margin-top: 1em;">Ademas, realiza las siguientes acciones y obten tus primeros puntos:</h2>
+                                    <button type="button" class="btn" style="background-color: #eacaca; font-size: 1em;">SHOP NOW!</button>
+                                    <h2 style="margin-top: 1em; font-size: 1.2em;">Ademas, realiza las siguientes acciones y obten tus primeros puntos:</h2>
                                  </div>
                               </div>
                               <br>
@@ -2066,7 +1946,17 @@
                                         <img src="/statics/img/how/06.png">
                                       </div>
                                       <div class="flip-box-back" valign="middle">
-                                        <h2 class="flip-box-back-font">Valido solo por 1 vez y si se usa ropa de Meh Peru</h2>
+                                        <h2 class="flip-box-back-font">Valido sólo por 1 vez y si se usa ropa de Meh Peru</h2>
+                                      </div>
+                                    </div>
+                                 </div>
+                                 <div class="col-6 col-md-4 flip-box">
+                                    <div class="flip-box-inner">
+                                      <div class="flip-box-front">
+                                        <img src="/statics/img/how/07.png">
+                                      </div>
+                                      <div class="flip-box-back" valign="middle">
+                                        <h2 class="flip-box-back-font">Crea tu cuenta y empieza con 50 puntos Meh</h2>
                                       </div>
                                     </div>
                                  </div>
@@ -2345,6 +2235,64 @@
             </div>
          </footer>
       </div>
+      <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+      <script src="vendor/bootstrap/js/bootstrap.js"></script>
+      <script>
+         $(document).ready(function () {
+             var navListItems = $('div.setup-panel div a'),
+                 allWells = $('.setup-content'),
+                 allNextBtn = $('.nextBtn'),
+                 allPrevBtn = $('.prevBtn');
+         
+             allWells.hide();
+         
+             navListItems.click(function (e) {
+                 e.preventDefault();
+                 var $target = $($(this).attr('href')),
+                     $item = $(this);
+         
+                 if (!$item.hasClass('disabled')) {
+                     // navListItems.removeClass('btn-indigo').addClass('btn-default');
+                     // $item.addClass('btn-indigo');
+                     allWells.hide();
+                     $target.show();
+                     $target.find('input:eq(0)').focus();
+                 }
+             });
+         
+             allPrevBtn.click(function(){
+                 var curStep = $(this).closest(".setup-content"),
+                     curStepBtn = curStep.attr("id"),
+                     prevStepSteps = $('div.setup-panel div a[href="#' + curStepBtn + '"]').parent().prev().children("a");
+         
+                     prevStepSteps.removeAttr('disabled').trigger('click');
+             });
+         
+             allNextBtn.click(function(){
+                 var curStep = $(this).closest(".setup-content"),
+                     curStepBtn = curStep.attr("id"),
+                     nextStepWizard = $('div.setup-panel div a[href="#' + curStepBtn + '"]').parent().next().children("a"),
+                     curInputs = curStep.find("input[type='text'],input[type='url']"),
+                     isValid = true;
+         
+                 $(".form-group").removeClass("has-error");
+                 for(var i=0; i< curInputs.length; i++){
+                     if (!curInputs[i].validity.valid){
+                         isValid = false;
+                         $(curInputs[i]).closest(".form-group").addClass("has-error");
+                     }
+                 }
+         
+                 if (isValid)
+                     nextStepWizard.removeAttr('disabled').trigger('click');
+             });
+         
+             $('div.setup-panel div a.btn-indigo').trigger('click');
+            //  $('div.setup-panel div').trigger('click');
+         });
+           
+      </script>
       <script src="https://cdn.shopify.com/s/files/1/0025/5308/6019/t/10/assets/theme.js?v=12313358220519712709" type="text/javascript"></script>
    
       <script type="text/javascript">
@@ -2449,7 +2397,7 @@
             }
             var personalInfoH3 = document.getElementById('personalInfoH3');
             if (personalInfoH3 != null) {
-                personalInfoH3.innerHTML = "<h3><strong>Inicia sesión para ver tu información</strong></h3>";
+                personalInfoH3.innerHTML = "";
             }
             var personalInfoTab = document.getElementById('personalInfoTab');
             if (personalInfoTab != null) {

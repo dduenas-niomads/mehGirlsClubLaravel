@@ -245,7 +245,7 @@
                display:block;
             }
             .flip-box-back-font{
-               font-size: 12px;
+               font-size: 1.2em;
             }
             .flip-box{
                height: 60px;
