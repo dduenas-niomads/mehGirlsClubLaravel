@@ -189,6 +189,9 @@
             color: black;
             transform: rotateY(180deg);
          }
+         .tableFontSize{
+            font-size: 1em;
+         }
          @media (max-width: 640px) and (min-width: 320px){
             .banner_full{
                display:none;
@@ -205,6 +208,9 @@
             }
             .flip-box{
                height: 85px;
+            }
+            .tableFontSize{
+               font-size: 0.6em;
             }
          }
       </style>
@@ -1321,7 +1327,7 @@
                                  <div class="col-md-6">
                                     <h4 style="font-size:1.2em;" >Historial de pedidos (total {{ count($orders) }})</h4>
                                     <div class="table-wrap" style="border-radius: 10px;">
-                                          <table class="table table-bordered" style="font-size: 12px;">
+                                          <table class="table table-bordered tableFontSize">
                                              <thead class="table-dark">
                                                 <tr>
                                                    <th>Pedido</th>
@@ -1354,7 +1360,7 @@
                         <div class="tab-pane fade" id="nav-meh-girls-club" role="tabpanel" aria-labelledby="nav-meh-girls-club-tab">
                            <div class="rte">
                               <br>
-                                 <h3 class="font-weight-bold pl-0 my-4" style="font-size: 1.2em;" align="center"><strong id="mehPointsH3">{{ $shopUser->loyalty_level_name }} - {{ $shopUser->loyalty_points }} puntos</strong></h3>
+                              <h3 class="font-weight-bold pl-0 my-4" style="font-size: 1.2em;" align="center"><strong id="mehPointsH3">{{ $shopUser->loyalty_level_name }} - {{ $shopUser->loyalty_points }} puntos</strong></h3>
                               <!-- setup-header -->
                               <div class="row setup-panel" style="padding-left: 2em; padding-right: 2em;">
                                  <select class="" id="setUpPanelSelectId" onChange="selectSetUpContent('setUpPanelSelectId');">
@@ -2126,7 +2132,7 @@
                                     <h4 align="center" style="font-size:1em;">A continuación, podrás visualizar el historial de tus puntos ganados y canjes</h4>
                                     <br>
                                     <div class="table-wrap table-responsive" style="border-radius: 10px;">
-                                       <table class="table table-bordered table-sm" style="font-size: 0.6em;">
+                                       <table class="table table-bordered table-sm tableFontSize">
                                           <thead class="table-dark">
                                              <tr>
                                                 <th>Código</th>
