@@ -1972,102 +1972,142 @@
                               <div class="row">
                                  <div class="col-6 col-md-4 flip-box">
                                     <div class="flip-box-inner">
-                                      <div class="flip-box-front">
-                                        <img src="/statics/img/benefits/01.png">
-                                      </div>
+                                       <div class="flip-box-front">
+                                          <img src="/statics/img/benefits/01.png">
+                                       </div>
                                       <div class="flip-box-back" valign="middle">
-                                          <h3 class="flip-box-back-font">"No aplica con otros descuentos y/o promociones. Sólo ingresa el código al hacer checkout"</h3>
+                                          <h3 class="flip-box-back-font">
+                                             <a href="/create-cupon?userId={{ $shopUser->shop_id }}&cuponId=1">
+                                                "No aplica con otros descuentos y/o promociones. Sólo ingresa el código al hacer checkout"
+                                             </a>
+                                          </h3>
                                       </div>
                                     </div>
                                  </div>
                                  <div class="col-6 col-md-4 flip-box">
                                     <div class="flip-box-inner">
-                                      <div class="flip-box-front">
-                                        <img src="/statics/img/benefits/02.png">
-                                      </div>
-                                      <div class="flip-box-back" valign="middle">
-                                        <h3 class="flip-box-back-font">"No aplica con otros descuentos y/o promociones. Sólo ingresa el código al hacer checkout"</h3>
-                                      </div>
-                                    </div>
-                                 </div>
-                                 <div class="col-6 col-md-4 flip-box">
-                                    <div class="flip-box-inner">
-                                      <div class="flip-box-front">
-                                        <img src="/statics/img/benefits/03.png">
-                                      </div>
-                                      <div class="flip-box-back" valign="middle">
-                                        <h3 class="flip-box-back-font">"No aplica con otros descuentos y/o promociones. Sólo ingresa el código al hacer checkout"</h3>
-                                      </div>
-                                    </div>
-                                 </div>
-                                 <div class="col-6 col-md-4 flip-box">
-                                    <div class="flip-box-inner">
-                                      <div class="flip-box-front">
-                                        <img src="/statics/img/benefits/04.png">
-                                      </div>
-                                      <div class="flip-box-back" valign="middle">
-                                        <h3 class="flip-box-back-font">"No aplica con otros descuentos y/o promociones. Sólo ingresa el código al hacer checkout"</h3>
-                                      </div>
-                                    </div>
-                                 </div>
-                                 <div class="col-6 col-md-4 flip-box">
-                                    <div class="flip-box-inner">
-                                      <div class="flip-box-front">
-                                        <img src="/statics/img/benefits/05.png">
-                                      </div>
+                                       <div class="flip-box-front">
+                                          <img src="/statics/img/benefits/02.png">
+                                       </div>
                                        <div class="flip-box-back" valign="middle">
-                                          <h3 class="flip-box-back-font">Recibe un meh basic gratis en tu próxima compra</h3>
+                                          <h3 class="flip-box-back-font">
+                                             <a href="/create-cupon?userId={{ $shopUser->shop_id }}&cuponId=2">   
+                                                "No aplica con otros descuentos y/o promociones. Sólo ingresa el código al hacer checkout"
+                                             </a>
+                                          </h3>
                                        </div>
                                     </div>
                                  </div>
                                  <div class="col-6 col-md-4 flip-box">
                                     <div class="flip-box-inner">
-                                      <div class="flip-box-front">
-                                        <img src="/statics/img/benefits/06.png">
-                                      </div>
-                                      <div class="flip-box-back" valign="middle">
-                                          <h3 class="flip-box-back-font">Recibe tu denim favorito en tu próxima compra</h3>
+                                       <div class="flip-box-front">
+                                          <img src="/statics/img/benefits/03.png">
+                                       </div>
+                                       <div class="flip-box-back" valign="middle">
+                                          <h3 class="flip-box-back-font">
+                                             <a href="/create-cupon?userId={{ $shopUser->shop_id }}&cuponId=3">   
+                                                "No aplica con otros descuentos y/o promociones. Sólo ingresa el código al hacer checkout"
+                                             </a>
+                                          </h3> 
                                        </div>
                                     </div>
                                  </div>
                                  <div class="col-6 col-md-4 flip-box">
                                     <div class="flip-box-inner">
-                                      <div class="flip-box-front">
-                                        <img src="/statics/img/benefits/07.png">
-                                      </div>
-                                      <div class="flip-box-back" valign="middle">
-                                        <h3 class="flip-box-back-font">Recibe tu par de zapatos favoritos en tu próxima compra</h3>
-                                      </div>
-                                    </div>
-                                 </div>
-                                 <div class="col-6 col-md-4 flip-box">
-                                    <div class="flip-box-inner">
-                                      <div class="flip-box-front">
-                                        <img src="/statics/img/benefits/08.png">
-                                      </div>
-                                      <div class="flip-box-back" valign="middle">
-                                        <h3 class="flip-box-back-font">"No aplica con otros descuentos y/o promociones. Sólo ingresa el código al hacer checkout"</h3>
-                                      </div>
-                                    </div>
-                                 </div>
-                                 <div class="col-6 col-md-4 flip-box">
-                                    <div class="flip-box-inner">
-                                      <div class="flip-box-front">
-                                        <img src="/statics/img/benefits/09.png">
-                                      </div>
-                                      <div class="flip-box-back" valign="middle">
-                                        <h3 class="flip-box-back-font">"No aplica con otros descuentos y/o promociones. Sólo ingresa el código al hacer checkout"</h3>
+                                       <div class="flip-box-front">
+                                          <img src="/statics/img/benefits/04.png">
+                                       </div>
+                                       <div class="flip-box-back" valign="middle">
+                                          <h3 class="flip-box-back-font">
+                                             <a href="/create-cupon?userId={{ $shopUser->shop_id }}&cuponId=4">
+                                                "No aplica con otros descuentos y/o promociones. Sólo ingresa el código al hacer checkout"
+                                             </a>
+                                          </h3>   
                                        </div>
                                     </div>
                                  </div>
                                  <div class="col-6 col-md-4 flip-box">
                                     <div class="flip-box-inner">
-                                      <div class="flip-box-front">
-                                        <img src="/statics/img/benefits/10.png">
-                                      </div>
-                                      <div class="flip-box-back" valign="middle">
-                                         <h3 class="flip-box-back-font">"No aplica con otros descuentos y/o promociones. Sólo ingresa el código al hacer checkout"</h3>
-                                      </div>
+                                       <div class="flip-box-front">
+                                          <img src="/statics/img/benefits/05.png">
+                                       </div>
+                                       <div class="flip-box-back" valign="middle">
+                                          <h3 class="flip-box-back-font">   
+                                             <a href="/create-cupon?userId={{ $shopUser->shop_id }}&cuponId=5">
+                                                Recibe un meh basic gratis en tu próxima compra
+                                             </a>
+                                          </h3>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="col-6 col-md-4 flip-box">
+                                    <div class="flip-box-inner">
+                                       <div class="flip-box-front">
+                                          <img src="/statics/img/benefits/06.png">
+                                       </div>
+                                       <div class="flip-box-back" valign="middle">
+                                          <h3 class="flip-box-back-font">
+                                             <a href="/create-cupon?userId={{ $shopUser->shop_id }}&cuponId=6">
+                                                Recibe tu denim favorito en tu próxima compra
+                                             </a>
+                                          </h3>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="col-6 col-md-4 flip-box">
+                                    <div class="flip-box-inner">
+                                       <div class="flip-box-front">
+                                          <img src="/statics/img/benefits/07.png">
+                                       </div>
+                                       <div class="flip-box-back" valign="middle">
+                                          <h3 class="flip-box-back-font">
+                                             <a href="/create-cupon?userId={{ $shopUser->shop_id }}&cuponId=7">
+                                                Recibe tu par de zapatos favoritos en tu próxima compra
+                                             </a>
+                                          </h3>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="col-6 col-md-4 flip-box">
+                                    <div class="flip-box-inner">
+                                       <div class="flip-box-front">
+                                          <img src="/statics/img/benefits/08.png">
+                                       </div>
+                                       <div class="flip-box-back" valign="middle">
+                                          <h3 class="flip-box-back-font">
+                                             <a href="/create-cupon?userId={{ $shopUser->shop_id }}&cuponId=8">
+                                                "No aplica con otros descuentos y/o promociones. Sólo ingresa el código al hacer checkout"
+                                             </a>
+                                          </h3>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="col-6 col-md-4 flip-box">
+                                    <div class="flip-box-inner">
+                                       <div class="flip-box-front">
+                                          <img src="/statics/img/benefits/09.png">
+                                       </div>
+                                       <div class="flip-box-back" valign="middle">
+                                          <h3 class="flip-box-back-font">
+                                             <a href="/create-cupon?userId={{ $shopUser->shop_id }}&cuponId=9">
+                                                "No aplica con otros descuentos y/o promociones. Sólo ingresa el código al hacer checkout"
+                                             </a>
+                                          </h3>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="col-6 col-md-4 flip-box">
+                                    <div class="flip-box-inner">
+                                       <div class="flip-box-front">
+                                          <img src="/statics/img/benefits/10.png">
+                                       </div>
+                                       <div class="flip-box-back" valign="middle">
+                                          <h3 class="flip-box-back-font">
+                                             <a href="/create-cupon?userId={{ $shopUser->shop_id }}&cuponId=10">
+                                                "No aplica con otros descuentos y/o promociones. Sólo ingresa el código al hacer checkout"
+                                             </a>
+                                          </h3>
+                                       </div>
                                     </div>
                                  </div>
                               </div>
