@@ -1386,7 +1386,6 @@
                                  </div>
                               </div>
                               <!-- setup-content -->
-                              <form role="form" action="" method="post">
                                  <div class="row setup-content" id="step-1">
                                     <div class="col-md-2"></div>
                                     <div class="col-md-8">
@@ -1842,7 +1841,6 @@
                                     </div>
                                     <div class="col-md-2"></div>
                                  </div>
-                              </form>
                            </div>
                         </div>
                         <div class="tab-pane fade  show active" id="nav-how" role="tabpanel" aria-labelledby="nav-how-tab">
