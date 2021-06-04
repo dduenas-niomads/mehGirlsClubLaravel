@@ -1257,7 +1257,7 @@
                                  <div class="col-md-4" align="left" id="profileForm" style="display: none;">
                                     <h4 style="font-size:1.2em;">Editar perfil</h4>
                                     <br>
-                                    <form method="post" action="{{ route('shopuser-update') }}" autocomplete="off">
+                                    <form method="get" action="{{ route('shopuser-update') }}" autocomplete="off">
                                        @csrf
                                        @method('post')
                                        <input type="hidden" name="shop_user_id" value="{{ $shopUser->id }}">
