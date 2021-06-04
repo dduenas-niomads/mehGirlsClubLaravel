@@ -1203,7 +1203,7 @@
                               <br>
                               <div class="row" id="personalInfoTab">
                                  <div class="col-md-2"></div>
-                                 <div class="col-md-6" align="left" id="profileInfo" style="display: block;">
+                                 <div class="col-md-4" align="left" id="profileInfo" style="display: block;">
                                     <h4 style="font-size:1.2em;">Datos de perfil</h4>
                                     <br>
                                     <div class="form-group row" style="margin-bottom: 0rem;">
@@ -1254,7 +1254,7 @@
                                        </div>
                                     </div>
                                  </div>
-                                 <div class="col-md-6" align="left" id="profileForm" style="display: none;">
+                                 <div class="col-md-4" align="left" id="profileForm" style="display: none;">
                                     <h4 style="font-size:1.2em;">Editar perfil</h4>
                                     <br>
                                     <form method="post" action="{{ route('shopuser-update') }}" autocomplete="off">
@@ -1322,7 +1322,7 @@
                                        </div>
                                     </form>
                                  </div>
-                                 <div class="col-md-6">
+                                 <div class="col-md-4">
                                     <h4 style="font-size:1.2em;" >Historial de pedidos (total {{ count($orders) }})</h4>
                                     <div class="table-wrap" style="border-radius: 10px;">
                                           <table class="table table-bordered tableFontSize">
