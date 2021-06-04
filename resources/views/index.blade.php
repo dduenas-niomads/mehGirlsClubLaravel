@@ -1193,7 +1193,7 @@
                            <div class="rte">
                               <br>
                               <h3 class="pl-0 my-4" style="font-size:1.2em;" align="center">!Hola, <b>{{ $shopUser->first_name }}</b>! Aquí podrás ver el resumen de tu perfil, puntos y últimas compras</h3>
-                              <h3 class="pl-0 my-4" style="font-size:1.2em;" align="center">Eres nivel <strong id="cuponsInfoH3">{{ $shopUser->loyalty_level_name }}</strong> ({{ $shopUser->loyalty_points }} puntos en total)</h3>
+                              <h3 class="pl-0 my-4" style="font-size:1.2em;" align="center">Eres nivel <strong id="cuponsInfoH3">{{ $shopUser->loyalty_level_name }}</strong> ({{ $shopUser->loyalty_points }} puntos acumulados)</h3>
                               <br>
                               <div class="row" id="personalInfoTab">
 
