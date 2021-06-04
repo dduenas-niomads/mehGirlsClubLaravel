@@ -1258,8 +1258,6 @@
                                     <h4 style="font-size:1.2em;">Editar perfil</h4>
                                     <br>
                                     <form method="get" action="{{ route('shopuser-update') }}" autocomplete="off">
-                                       @csrf
-                                       @method('get')
                                        <input type="hidden" name="shop_user_id" value="{{ $shopUser->id }}">
                                        <div class="form-group row" style="margin-bottom: 0rem;">
                                           <label class="col-sm-4 col-form-label"><b>Nombres</b></label>
