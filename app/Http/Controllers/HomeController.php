@@ -176,8 +176,12 @@ class HomeController extends Controller
                 $shopUserCupons = ShopUserCupon::whereNull(ShopUserCupon::TABLE_NAME . '.deleted_at')
                     ->where(ShopUserCupon::TABLE_NAME . '.shop_users_id', $shopUser->id)
                     ->get();
-                    
-                return view('index', compact('shopUser', 'orders', 'shopUserCupons'));
+
+                if (isset($params['view'])) {
+                    return view($params['view'], compact('shopUser', 'orders', 'shopUserCupons'));
+                } else { 
+                    return view('index', compact('shopUser', 'orders', 'shopUserCupons'));
+                }   
             } catch (\Throwable $th) {
                 dd($th);
                 return "error de usuario";
