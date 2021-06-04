@@ -2359,7 +2359,6 @@
          const queryString = window.location.search;
          const urlParams = new URLSearchParams(queryString);
          const userId = urlParams.get('userId');
-         var availablePoints = 0;
 
         function goToNav(target) {
             var targetElement = document.getElementById(target);
@@ -2387,60 +2386,51 @@
             }
          }
 
-        if (userId != null) { 
+         if (userId != null) { 
             // con sesión
-            availablePoints = 246;
-            var mehPointsH3 = document.getElementById('mehPointsH3');
-            if (mehPointsH3 != null) {
-                mehPointsH3.innerHTML = "MEH INTERN - " + availablePoints + " puntos";
-            }
             var liMiAccount = document.getElementById('liMiAccount');
             if (liMiAccount != null) {
-                liMiAccount.innerHTML = "Mi cuenta";
+               liMiAccount.innerHTML = "Mi cuenta";
             }
             var customer_logout_link = document.getElementById('customer_logout_link');
             if (customer_logout_link != null) {
-                customer_logout_link.innerHTML = "Cerrar sesión";
-            }
-            var cuponsInfoH3 = document.getElementById('cuponsInfoH3');
-            if (cuponsInfoH3 != null) {
-                cuponsInfoH3.innerHTML = "Te quedan " + availablePoints + " puntos disponibles";
+               customer_logout_link.innerHTML = "Cerrar sesión";
             }
             var userIdHiddenInput = document.getElementById('userIdHiddenInput');
             if (userIdHiddenInput != null) {
-                userIdHiddenInput.value = userId;
+               userIdHiddenInput.value = userId;
             }
-        } else {
+         } else {
             // sin sesión
             var mehPointsH3 = document.getElementById('mehPointsH3');
             if (mehPointsH3 != null) {
-                mehPointsH3.innerHTML = "Inicia sesión para ver tu información";
+               mehPointsH3.innerHTML = "Inicia sesión para ver tu información";
             }
             var liMiAccount = document.getElementById('liMiAccount');
             if (liMiAccount != null) {
-                liMiAccount.innerHTML = "Iniciar sesión";
+               liMiAccount.innerHTML = "Iniciar sesión";
             }
             var customer_logout_link = document.getElementById('customer_logout_link');
             if (customer_logout_link != null) {
-                customer_logout_link.innerHTML = "";
+               customer_logout_link.innerHTML = "";
             }
             var personalInfoH3 = document.getElementById('personalInfoH3');
             if (personalInfoH3 != null) {
-                personalInfoH3.innerHTML = "";
+               personalInfoH3.innerHTML = "<h3><strong>Inicia sesión para ver tu información</strong></h3>";
             }
             var personalInfoTab = document.getElementById('personalInfoTab');
             if (personalInfoTab != null) {
-                personalInfoTab.innerHTML = "";
+               personalInfoTab.innerHTML = "";
             }
             var cuponsInfoH3 = document.getElementById('cuponsInfoH3');
             if (cuponsInfoH3 != null) {
-                cuponsInfoH3.innerHTML = "Ingresa a tu cuenta para ver tus cupones";
+               cuponsInfoH3.innerHTML = "Ingresa a tu cuenta para ver tus cupones";
             }
             var userIdHiddenInput = document.getElementById('userIdHiddenInput');
             if (userIdHiddenInput != null) {
-                userIdHiddenInput.value = 0;
+               userIdHiddenInput.value = 0;
             }
-        }
+         }
       </script>
    </body>
 </html>

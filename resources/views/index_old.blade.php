@@ -2516,7 +2516,6 @@
          const queryString = window.location.search;
          const urlParams = new URLSearchParams(queryString);
          const userId = urlParams.get('userId');
-         var availablePoints = 0;
 
         function goToNav(target) {
             var targetElement = document.getElementById(target);

@@ -2344,7 +2344,7 @@
 
         if (userId != null) { 
             // con sesión
-            availablePoints = 246;
+            availablePoints = 0;
             var mehPointsH3 = document.getElementById('mehPointsH3');
             if (mehPointsH3 != null) {
                 mehPointsH3.innerHTML = "MEH INTERN - " + availablePoints + " puntos";
