@@ -1202,7 +1202,7 @@
                               <h3 class="pl-0 my-4" style="font-size:1.2em;" align="center">Eres nivel <strong id="cuponsInfoH3">{{ $shopUser->loyalty_level_name }}</strong> ({{ $shopUser->loyalty_points }} puntos acumulados)</h3>
                               <br>
                               <div class="row" id="personalInfoTab">
-
+                                 <div class="col-md-2"></div>
                                  <div class="col-md-6" align="left" id="profileInfo" style="display: block;">
                                     <h4 style="font-size:1.2em;">Datos de perfil</h4>
                                     <br>
@@ -1254,7 +1254,6 @@
                                        </div>
                                     </div>
                                  </div>
-
                                  <div class="col-md-6" align="left" id="profileForm" style="display: none;">
                                     <h4 style="font-size:1.2em;">Editar perfil</h4>
                                     <br>
@@ -1323,7 +1322,6 @@
                                        </div>
                                     </form>
                                  </div>
-
                                  <div class="col-md-6">
                                     <h4 style="font-size:1.2em;" >Historial de pedidos (total {{ count($orders) }})</h4>
                                     <div class="table-wrap" style="border-radius: 10px;">
@@ -1352,6 +1350,7 @@
                                           </table>
                                     </div>
                                  </div>
+                                 <div class="col-md-2"></div>
                               </div>
                               <br>
                               <hr>
