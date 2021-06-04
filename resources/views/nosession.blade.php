@@ -1359,11 +1359,11 @@
                               <!-- setup-header -->
                               <div class="row setup-panel" style="padding-left: 2em; padding-right: 2em;">
                                  <select class="" id="setUpPanelSelectId" onChange="selectSetUpContent('setUpPanelSelectId');">
-                                    <option value="a-step-1">Meh intern - 0 a 750 puntos</option>
-                                    <option value="a-step-2">Meh intern - 750 a 2000 puntos</option>
-                                    <option value="a-step-3">Meh intern - 2000 a 5000 puntos</option>
-                                    <option value="a-step-4">Meh intern - 5000 a 10000 puntos</option>
-                                    <option value="a-step-5">Meh intern - 10000 a más puntos</option>
+                                    <option value="a-step-1">Meh Intern - 0 a 750 puntos</option>
+                                    <option value="a-step-2">Meh Insider - 750 a 2000 puntos</option>
+                                    <option value="a-step-3">Girl Boss - 2000 a 5000 puntos</option>
+                                    <option value="a-step-4">Baby Meh - 5000 a 10000 puntos</option>
+                                    <option value="a-step-5">Meh Girl - 10000 a más puntos</option>
                                  </select>
                               </div>
                               <div class="steps-form" style="display: none;">
