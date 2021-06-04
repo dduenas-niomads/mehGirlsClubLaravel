@@ -1131,7 +1131,7 @@
                             </div>
                             <div class="form-group row" style="margin-bottom: 0rem;">
                                 <div class="col-sm-12" align="center">
-                                    <form method="post" action="{{ route('store-cupon') }}" autocomplete="off">
+                                    <form method="post" action="/store-cupon" autocomplete="off">
                                        @csrf
                                        @method('post')
                                        <input type="hidden" name="userId" value="{{ $shopUser->id }}">
