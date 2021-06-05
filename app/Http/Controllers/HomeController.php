@@ -72,7 +72,18 @@ class HomeController extends Controller
                     $shopUser->default_address = $customer->getDefaultAddressArray();
                     $shopUser->created_at = $customer->getCreatedAt()->format('Y-m-d H:i:s');
                     $shopUser->updated_at = $customer->getUpdatedAt()->format('Y-m-d H:i:s');
+                    // agregar 50 puntos al registrarse
+                    $shopUser->loyalty_points_for_extras = 50;
                     $shopUser->save();
+                    // crear puntaje en historial
+                    $shopUserCupon = new ShopUserCupon();
+                    $shopUserCupon->shop_users_id = $shopUser->id;
+                    $shopUserCupon->points = 50;
+                    $shopUserCupon->code = "EXTPOINT_NEW_USER";
+                    $shopUserCupon->name = 'EXTRA POINTS';
+                    $shopUserCupon->description = '¡Recibe 50 puntos al formar parte del club!';
+                    $shopUserCupon->created_at = date('Y-m-d H:i:s');
+                    $shopUserCupon->save();
                 } else {
                     // actualizar datos de usuario
                     $shopUser->shop_id = $customer->getId();

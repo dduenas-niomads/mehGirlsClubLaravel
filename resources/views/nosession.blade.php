@@ -1015,6 +1015,11 @@
                <div class="grid--full medium-down--hide">
                   <div class="grid__item"><ul class="site-nav site-nav-full" id="AccessibleNav" style="margin-left:120px; float: left;">
                   <li>
+                     <a href="https://mehperu.com/collections/meh-girls-club" class="site-nav__link" data-meganav-type="child" tabindex="">
+                        MEH GIRLS CLUB 
+                     </a>
+                  </li>
+                  <li>
                      <a href="https://mehperu.com/collections/new-in-meh" class="site-nav__link" data-meganav-type="child" tabindex="">
                         NEW IN 
                      </a>
@@ -1052,6 +1057,11 @@
                   <li>
                      <a href="https://mehperu.com/products/giftcard-meh" class="site-nav__link" data-meganav-type="child" tabindex="">
                         GIFTCARD ♥
+                     </a>
+                  </li>
+                  <li>
+                     <a href="https://mehperu.com/pages/meh-girls-club" class="site-nav__link" data-meganav-type="child" tabindex="">
+                        Join the club
                      </a>
                   </li>
                </ul>
