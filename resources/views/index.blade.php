@@ -1019,58 +1019,14 @@
                   </a>
                </div>               
                <div class="grid--full medium-down--hide">
-                  <div class="grid__item"><ul class="site-nav site-nav-full" id="AccessibleNav" style="margin-left:120px; float: left;">
-                  <li>
-                     <a href="https://mehperu.com/collections/meh-girls-club" class="site-nav__link" data-meganav-type="child" tabindex="">
-                        MEH GIRLS CLUB 
-                     </a>
-                  </li>
-                  <li>
-                     <a href="https://mehperu.com/collections/new-in-meh" class="site-nav__link" data-meganav-type="child" tabindex="">
-                        NEW IN 
-                     </a>
-                  </li>
-                  <li>
-                     <a href="https://mehperu.com/collections/meh-x-winnie-v2" class="site-nav__link" data-meganav-type="child" tabindex="">
-                        MehxWinnie
-                     </a>
-                  </li>
-                  <li>
-                     <a href="https://mehperu.com/collections/knit" class="site-nav__link" data-meganav-type="child" tabindex="">
-                        KNITWEAR
-                     </a>
-                  </li>
-                  <li>
-                     <a href="https://mehperu.com/collections/basics-v1" class="site-nav__link" data-meganav-type="child" tabindex="">
-                        BASICS 
-                     </a>
-                  </li>
-                  <li>
-                     <a href="http://rebelsclo.com" class="site-nav__link" data-meganav-type="child" tabindex="">
-                        REBELS
-                     </a>
-                  </li>
-                  <li>
-                     <a href="https://mehperu.com/collections/sale-abril" class="site-nav__link" data-meganav-type="child" tabindex="">
-                        SALE 
-                     </a>
-                  </li>
-                  <li>
-                     <a href="https://mehperu.com/collections/meh-details" class="site-nav__link" data-meganav-type="child" tabindex="">
-                        DETAILS
-                     </a>
-                  </li>
-                  <li>
-                     <a href="https://mehperu.com/products/giftcard-meh" class="site-nav__link" data-meganav-type="child" tabindex="">
-                        GIFTCARD ♥
-                     </a>
-                  </li>
-                  <li>
-                     <a href="https://mehperu.com/pages/meh-girls-club" class="site-nav__link" data-meganav-type="child" tabindex="">
-                        Join the club
-                     </a>
-                  </li>
-               </ul>
+                  <div class="grid__item">
+                  <ul class="site-nav site-nav-full" id="AccessibleNav" style="margin-left:120px; float: left;">
+                     <li>
+                        <a href="https://mehperu.com" class="site-nav__link" data-meganav-type="child" tabindex="">
+                           Shop now! 
+                        </a>
+                     </li>
+                  </ul>
                      <div class="site-nav" style="right: 0; margin-right: 30px;">
                         <div class="header-bar__module header-bar__search">
                            <form action="https://mehperu.com/search" method="get" class="header-bar__search-form clearfix" role="search">
@@ -1123,48 +1079,8 @@
                <nav role="navigation">
                   <ul id="MobileNav" class="mobile-nav post-large--hide" style="display: none;">
                      <li class="mobile-nav__link">
-                        <a href="https://mehperu.com/collections/meh-x-winnie-v2" class="mobile-nav">
-                        MehxWinnie
-                        </a>
-                     </li>
-                     <li class="mobile-nav__link">
-                        <a href="https://mehperu.com/collections/chompas" class="mobile-nav">
-                        KNITWEAR
-                        </a>
-                     </li>
-                     <li class="mobile-nav__link">
-                        <a href="https://mehperu.com/collections/basics-v1" class="mobile-nav">
-                        MEHBASICS
-                        </a>
-                     </li>
-                     <li class="mobile-nav__link">
-                        <a href="https://mehperu.com/collections/rebelsclo" class="mobile-nav">
-                        REBELS
-                        </a>
-                     </li>
-                     <li class="mobile-nav__link">
-                        <a href="https://mehperu.com/collections/shoes" class="mobile-nav">
-                        SHOES
-                        </a>
-                     </li>
-                     <li class="mobile-nav__link">
-                        <a href="https://mehperu.com/collections/meh-details" class="mobile-nav">
-                        DETAILS
-                        </a>
-                     </li>
-                     <li class="mobile-nav__link">
-                        <a href="https://mehperu.com/collections/meh-undies" class="mobile-nav">
-                        UNDIES 
-                        </a>
-                     </li>
-                     <li class="mobile-nav__link">
-                        <a href="https://mehperu.com/collections/meh-upcycled" class="mobile-nav">
-                        UPCYCLED
-                        </a>
-                     </li>
-                     <li class="mobile-nav__link">
-                        <a href="https://mehperu.com/collections/last-units-left" class="mobile-nav">
-                        ULTIMAS UNIDADES
+                        <a href="https://mehperu.com" class="mobile-nav">
+                        Shop now!
                         </a>
                      </li>
                   </ul>
