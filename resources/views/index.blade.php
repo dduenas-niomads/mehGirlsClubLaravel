@@ -1121,7 +1121,7 @@
                         </li>
                      </ul>
                      <div class="tab-content" id="nav-tabContent">
-                        <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+                        <div class="tab-pane fade show active" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
                            <div class="rte">
                               <br>
                               <h3 class="pl-0 my-4" style="font-size:1.2em;" align="center">!Hola, <b>{{ $shopUser->first_name }}</b>! Aquí podrás ver el resumen de tu perfil, puntos y últimas compras</h3>
@@ -1793,7 +1793,7 @@
                                  </div>
                            </div>
                         </div>
-                        <div class="tab-pane fade  show active" id="nav-how" role="tabpanel" aria-labelledby="nav-how-tab">
+                        <div class="tab-pane fade " id="nav-how" role="tabpanel" aria-labelledby="nav-how-tab">
                            <div class="rte">
                               <div>
                                  <br>
