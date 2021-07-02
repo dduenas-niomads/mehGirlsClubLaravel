@@ -1137,6 +1137,8 @@
                                        <input type="hidden" name="userId" value="{{ $shopUser->id }}">
                                        <input type="hidden" name="cuponId" value="{{ $cupon->id }}">
                                        <button type="submit" class="btn btn-outline-default">Canjear cupón</button>
+                                       <br>
+                                       <button type="button" onclick="javascript:history.back();" class="btn btn-outline-default">Regresar</button>
                                     </form>
                                 </div>
                             </div>

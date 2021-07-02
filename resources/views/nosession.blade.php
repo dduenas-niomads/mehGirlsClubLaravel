@@ -1033,7 +1033,7 @@
                         <div class="header-bar__module">
                            <ul class="header-bar__module--list">
                               <li>
-                                 <a href="https://mehperu.com/account" id="liMiAccount"></a>
+                                 <a href="https://mehperu.com/account/login?meh-girls-club" id="liMiAccount"></a>
                               </li>
                               <li>
                                  <a href="https://mehperu.com/account/logout" id="customer_logout_link"></a>

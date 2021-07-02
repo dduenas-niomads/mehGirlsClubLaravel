@@ -1039,7 +1039,7 @@
                         <div class="header-bar__module">
                            <ul class="header-bar__module--list">
                               <li>
-                                 <a href="https://mehperu.com/account" id="liMiAccount"></a>
+                                 <a href="https://mehperu.com/account?goto=mehgirlsclub" id="liMiAccount"></a>
                               </li>
                               <li>
                                  <a href="https://mehperu.com/account/logout" id="customer_logout_link"></a>
@@ -1105,7 +1105,7 @@
                   <div class="rte">
                      <ul class="nav nav-tabs" id="myTab" role="tablist" style="list-style-type:none;">
                         <li class="nav-item">
-                           <a class="nav-link active" id="nav-how-tab" data-toggle="tab" href="#nav-how" role="tab" aria-controls="nav-how" aria-selected="false">¿Cómo funciona?</a>
+                           <a class="nav-link" id="nav-how-tab" data-toggle="tab" href="#nav-how" role="tab" aria-controls="nav-how" aria-selected="false">¿Cómo funciona?</a>
                         </li>
                         <li class="nav-item">
                            <a class="nav-link" id="nav-meh-girls-club-tab" data-toggle="tab" href="#nav-meh-girls-club" role="tab" aria-controls="nav-meh-girls-club" aria-selected="false">Meh girls club</a>
@@ -1114,7 +1114,7 @@
                            <a class="nav-link" id="nav-benefits-tab" data-toggle="tab" href="#nav-benefits" role="tab" aria-controls="nav-benefits" aria-selected="false">Canjea tus puntos</a>
                         </li>
                         <li class="nav-item">
-                           <a class="nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Perfil</a>
+                           <a class="nav-link active" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Perfil</a>
                         </li>
                         <li class="nav-item">
                            <a class="nav-link" id="nav-cupons-tab" data-toggle="tab" href="#nav-cupons" role="tab" aria-controls="nav-cupons" aria-selected="false">Historial</a>
@@ -1133,44 +1133,58 @@
                                     <h4 style="font-size:1.2em;">Datos de perfil</h4>
                                     <br>
                                     <div class="form-group row" style="margin-bottom: 0rem;">
-                                       <label class="col-sm-4 col-form-label"><b>Nombres</b></label>
-                                       <div class="col-sm-8">
+                                       <div class="col-sm-4 col-4">
+                                          <label class="col-form-label"><b>Nombres</b></label>
+                                       </div>
+                                       <div class="col-sm-8 col-8">
                                           <p style="margin-top: 0.5rem;">{{ $shopUser->first_name ? $shopUser->first_name : "Ingresa tus nombres" }}</p>
                                        </div>
                                     </div>
                                     <div class="form-group row" style="margin-bottom: 0rem;">
-                                       <label class="col-sm-4 col-form-label"><b>Apellidos</b></label>
-                                       <div class="col-sm-8">
+                                       <div class="col-sm-4 col-4">
+                                          <label class="col-form-label"><b>Apellidos</b></label>
+                                       </div>
+                                       <div class="col-sm-8 col-8">
                                           <p style="margin-top: 0.5rem;">{{ $shopUser->last_name ? $shopUser->last_name : "Ingresa tus apellidos" }}</p>
                                        </div>
                                     </div>
                                     <div class="form-group row" style="margin-bottom: 0rem;">
-                                       <label class="col-sm-4 col-form-label"><b>Email</b></label>
-                                       <div class="col-sm-8">
+                                       <div class="col-sm-4 col-4">
+                                          <label class="col-form-label"><b>Email</b></label>
+                                       </div>
+                                       <div class="col-sm-8 col-8">
                                           <p style="margin-top: 0.5rem;">{{ $shopUser->email }}</p>
                                        </div>
                                     </div>
                                     <div class="form-group row" style="margin-bottom: 0rem;">
-                                       <label class="col-sm-4 col-form-label"><b>Documento</b></label>
-                                       <div class="col-sm-8">
+                                       <div class="col-sm-4 col-4">
+                                          <label class="col-form-label"><b>Documento</b></label>
+                                       </div>
+                                       <div class="col-sm-8 col-8">
                                           <p style="margin-top: 0.5rem;"><a style="margin-top: 0.5rem; cursor: pointer;" onclick="profileForm(1);">{{ $shopUser->document_number ? : "Ingresa tu DNI/CE/PASAPORTE" }}</a></p>
                                        </div>
                                     </div>
                                     <div class="form-group row" style="margin-bottom: 0rem;">
-                                       <label class="col-sm-4 col-form-label"><b>Cumpleaños</b></label>
-                                       <div class="col-sm-8">
+                                       <div class="col-sm-4 col-4">
+                                          <label class="col-form-label"><b>Cumpleaños</b></label>
+                                       </div>
+                                       <div class="col-sm-8 col-8">
                                           <p style="margin-top: 0.5rem;"><a style="margin-top: 0.5rem; cursor: pointer;" onclick="profileForm(1);">{{ $shopUser->birthday ? : "Ingresa tu cumpleaños" }}</a></p>
                                        </div>
                                     </div>
                                     <div class="form-group row" style="margin-bottom: 0rem;">
-                                       <label class="col-sm-4 col-form-label"><b>Dirección</b></label>
-                                       <div class="col-sm-8">
+                                       <div class="col-sm-4 col-4">
+                                          <label class="col-form-label"><b>Dirección</b></label>
+                                       </div>
+                                       <div class="col-sm-8 col-8">
                                           <p style="margin-top: 0.5rem;"><a style="margin-top: 0.5rem; cursor: pointer;" onclick="profileForm(2);">{{ $shopUser->default_address ? $shopUser->default_address['address1'] : "Ingresa tu dirección" }}</a></p>
                                        </div>
                                     </div>
                                     <div class="form-group row" style="margin-bottom: 0rem;">
-                                       <label class="col-sm-4 col-form-label"><b>Teléfono</b></label>
-                                       <div class="col-sm-8">
+                                       <div class="col-sm-4 col-4">
+                                          <label class="col-form-label"><b>Teléfono</b></label>
+                                       </div>
+                                       <div class="col-sm-8 col-8">
                                           <p style="margin-top: 0.5rem;">{{ $shopUser->phone ? $shopUser->phone : "Número de teléfono" }}</p>
                                        </div>
                                     </div>
@@ -1817,7 +1831,7 @@
                                       </div>
                                     </div>
                                  </div>
-                                 <div class="col-6 col-md-4 flip-box">
+                                 <!-- <div class="col-6 col-md-4 flip-box">
                                     <div class="flip-box-inner">
                                       <div class="flip-box-front">
                                         <img src="/statics/img/how/03.jpg">
@@ -1826,7 +1840,7 @@
                                         <h2 class="flip-box-back-font">Válido para compartir via whatsapp o por instagram.</h2>
                                       </div>
                                     </div>
-                                 </div>
+                                 </div> -->
                                  <div class="col-6 col-md-4 flip-box">
                                     <div class="flip-box-inner">
                                       <div class="flip-box-front">
@@ -1843,7 +1857,7 @@
                                         <img src="/statics/img/how/05.jpg">
                                       </div>
                                       <div class="flip-box-back" valign="middle">
-                                        <h2 class="flip-box-back-font">Sólo tienes que etiquetarnos con un Outfit meh y entraras al concurso mensual automaticamente.</h2>
+                                        <h2 class="flip-box-back-font">Sólo tienes que etiquetarnos con un Outfit meh y entrarás al concurso mensual automaticamente.</h2>
                                       </div>
                                     </div>
                                  </div>
@@ -1853,7 +1867,7 @@
                                         <img src="/statics/img/how/06.jpg">
                                       </div>
                                       <div class="flip-box-back" valign="middle">
-                                        <h2 class="flip-box-back-font">Valido sólo por 1 vez y si se usa ropa de Meh Perú.</h2>
+                                        <h2 class="flip-box-back-font">SÓLO 5 GANADORAS. Válido sólo por 1 vez y si se usa ropa de Meh Perú.</h2>
                                       </div>
                                     </div>
                                  </div>
@@ -1910,13 +1924,13 @@
                                        <div class="flip-box-front">
                                           <img src="/statics/img/benefits/01.png">
                                        </div>
+                                             <a href="/create-cupon?userId={{ $shopUser->shop_id }}&cuponId=1">
                                       <div class="flip-box-back" valign="middle">
                                           <h3 class="flip-box-back-font">
-                                             <a href="/create-cupon?userId={{ $shopUser->shop_id }}&cuponId=1">
                                                 "No aplica con otros descuentos y/o promociones. Sólo ingresa el código al hacer checkout"
-                                             </a>
                                           </h3>
                                       </div>
+                                             </a>
                                     </div>
                                  </div>
                                  <div class="col-6 col-md-4 flip-box">
