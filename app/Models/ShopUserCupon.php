@@ -28,6 +28,11 @@ class ShopUserCupon extends Model
      */
     protected $casts = [
     ];
+
+    public function shopUser()
+    {
+        return $this->belongsTo('App\Models\ShopUser', 'shop_users_id');
+    }
     public function getFillable() {
         # code...
         return $this->fillable;

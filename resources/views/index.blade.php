@@ -1189,6 +1189,14 @@
                                        </div>
                                     </div>
                                     <div class="form-group row" style="margin-bottom: 0rem;">
+                                       <div class="col-sm-4 col-4">
+                                          <label class="col-form-label"><b>Afiliado</b></label>
+                                       </div>
+                                       <div class="col-sm-8 col-8">
+                                          <p style="margin-top: 0.5rem;">{{ $shopUser->affiliate_code ? $shopUser->affiliate_code : "Sin afiliado" }}</p>
+                                       </div>
+                                    </div>
+                                    <div class="form-group row" style="margin-bottom: 0rem;">
                                        <div class="col-sm-12" align="center">
                                           <button onclick="profileForm(0);" class="btn btn-outline-default" style="font-size:1.2em;">Editar información</button>
                                        </div>
@@ -1258,7 +1266,7 @@
                                        <div class="form-group row" style="margin-bottom: 0rem;">
                                           <label class="col-sm-4 col-form-label"><b>Código de amigo afiliado</b></label>
                                           <div class="col-sm-8">
-                                             <input type="number" name="affiliate_code" class="form-control" placeholder="Ingresa el código de la persona que te invitó" value="{{ $shopUser->affiliate_code }}" onclick="this.select();" autocomplete="off" maxlength="15" required="">
+                                             <input type="number" name="affiliate_code" class="form-control" placeholder="Código de la persona que te invitó" value="{{ $shopUser->affiliate_code }}" onclick="this.select();" autocomplete="off" maxlength="15">
                                           </div>
                                        </div>
                                        <div class="form-group row" style="margin-bottom: 0rem;">

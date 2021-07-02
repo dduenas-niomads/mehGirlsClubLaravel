@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\ShopUser;
 use App\Models\ShopUserCupon;
 use App\Models\ShopCupon;
+use App\Notifications\StatusUpdate;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -76,14 +77,7 @@ class HomeController extends Controller
                     $shopUser->loyalty_points_for_extras = 50;
                     $shopUser->save();
                     // crear puntaje en historial
-                    $shopUserCupon = new ShopUserCupon();
-                    $shopUserCupon->shop_users_id = $shopUser->id;
-                    $shopUserCupon->points = 50;
-                    $shopUserCupon->code = "EXTPOINT_NEW_USER";
-                    $shopUserCupon->name = 'EXTRA POINTS';
-                    $shopUserCupon->description = '¡Recibe 50 puntos al formar parte del club!';
-                    $shopUserCupon->created_at = date('Y-m-d H:i:s');
-                    $shopUserCupon->save();
+                    $shopUserCupon = $this->createShopUserCupon($shopUser->id, 50, 'EXTPOINT_NEW_USER', 'EXTRA POINTS', '¡Recibe 50 puntos al formar parte del club!');
                 } else {
                     // actualizar datos de usuario
                     $shopUser->shop_id = $customer->getId();
@@ -138,14 +132,8 @@ class HomeController extends Controller
                                         ->where(ShopUserCupon::TABLE_NAME . '.shop_users_id', $shopUser->id)
                                         ->first();
                     if (is_null($shopUserCupon)) {
-                        $shopUserCupon = new ShopUserCupon();
-                        $shopUserCupon->shop_users_id = $shopUser->id;
-                        $shopUserCupon->points = ceil($value->getTotalPrice());
-                        $shopUserCupon->code = $value->getOrderNumber();
-                        $shopUserCupon->name = 'COMPRA';
-                        $shopUserCupon->description = '1 sol = 1 Meh point';
-                        $shopUserCupon->created_at = $value->getCreatedAt()->format('Y-m-d H:i:s');
-                        $shopUserCupon->save();
+                        $shopUserCupon = $this->createShopUserCupon($shopUser->id, ceil($value->getTotalPrice()), 
+                            '$value->getOrderNumber()','COMPRA', '1 sol = 1 Meh point', $value->getCreatedAt()->format('Y-m-d H:i:s'));
                     }
                 }
                 $orders = $orders_;
@@ -216,21 +204,35 @@ class HomeController extends Controller
                                         ->where(ShopUserCupon::TABLE_NAME . '.code', 'EXTPOINT_BIRTH')
                                         ->first();
                     if (is_null($shopUserCupon)) {
-                        $shopUserCupon = new ShopUserCupon();
-                        $shopUserCupon->shop_users_id = $shopUser->id;
-                        $shopUserCupon->points = 100;
-                        $shopUserCupon->code = 'EXTPOINT_BIRTH';
-                        $shopUserCupon->name = 'EXTRA POINTS';
-                        $shopUserCupon->description = 'Ingresa tu cumpleaños y gana 100 puntos';
-                        $shopUserCupon->save();
+                        $shopUserCupon = $this->createShopUserCupon($shopUser->id, 100, 
+                            'EXTPOINT_BIRTH','EXTRA POINTS', 'Ingresa tu cumpleaños y gana 100 puntos');
                         $shopUser->loyalty_points_for_extras = $shopUser->loyalty_points_for_extras + 100;
                     }
+                }
+                if (isset($params['affiliate_code'])
+                    && $params['affiliate_code'] !== ""
+                        && is_null($shopUser->affiliate_code)) {
+                            $shopUserAff = ShopUser::where(ShopUser::TABLE_NAME . '.document_number', $params['affiliate_code'])
+                                ->first();
+                            if (!is_null($shopUserAff)) {
+                                $shopUserAffCupon = ShopUserCupon::whereNull(ShopUserCupon::TABLE_NAME . '.deleted_at')
+                                                    ->where(ShopUserCupon::TABLE_NAME . '.shop_users_id', $shopUserAff->id)
+                                                    ->where(ShopUserCupon::TABLE_NAME . '.code', 'EXTPOINT_AFFILIATE')
+                                                    ->first();
+                                if (is_null($shopUserAffCupon)) {
+                                    $shopUserAffCupon = $this->createShopUserCupon($shopUserAff->id, 20, 
+                                        'EXTPOINT_AFFILIATE','EXTRA POINTS', 'Afilia a un amigo y gana 20 puntos');
+                                    $shopUserAff->loyalty_points_for_extras = $shopUserAff->loyalty_points_for_extras + 20;
+                                    $shopUserAff->save();
+                                }
+                            }
                 }
                 $shopUser->first_name = $params['first_name'];
                 $shopUser->last_name = $params['last_name'];
                 $shopUser->document_number = $params['document_number'];
                 $shopUser->birthday = $params['birthday'];
                 $shopUser->phone = $params['phone'];
+                $shopUser->affiliate_code = $params['affiliate_code'];
                 $shopUser->default_address = [
                     "address1" => $params['address_name'],
                     "city" => $params['city_name'],
@@ -258,17 +260,35 @@ class HomeController extends Controller
                                     ->where(ShopUserCupon::TABLE_NAME . '.code', 'EXTPOINT_IG')
                                     ->first();
                 if (is_null($shopUserCupon)) {
-                    $shopUserCupon = new ShopUserCupon();
-                    $shopUserCupon->shop_users_id = $shopUser->id;
-                    $shopUserCupon->points = 100;
-                    $shopUserCupon->code = 'EXTPOINT_IG';
-                    $shopUserCupon->name = 'EXTRA POINTS';
-                    $shopUserCupon->description = 'Follow @mehperu en Instagram';
-                    $shopUserCupon->save();
+                    $shopUserCupon = $this->createShopUserCupon($shopUser->id, 100, 'EXTPOINT_IG', 'EXTRA POINTS', 'Follow @mehperu en Instagram');
                     $shopUser->loyalty_points_for_extras = $shopUser->loyalty_points_for_extras + 100;
                     $shopUser->save();
                 }
             }
+        }
+        return $shopUserCupon;
+    }
+
+    public function createShopUserCupon($shopUserId = null, $points = 0, $code = null, $name = null, $description = null, $createdAt = null, $type = 1)
+    {
+        $shopUserCupon = new ShopUserCupon();
+        $shopUserCupon->shop_users_id = $shopUserId;
+        $shopUserCupon->points = $points;
+        $shopUserCupon->code = $code;
+        $shopUserCupon->name = $name;
+        $shopUserCupon->description = $description;
+        $shopUserCupon->type = $type;
+        if (!is_null($createdAt)) {
+            $shopUserCupon->created_at = $createdAt;
+        }
+        $shopUserCupon->save();
+        $shopUserCupon = ShopUserCupon::with('shopUser')->find($shopUserCupon->id);
+        if (!is_null($shopUserCupon)
+            && !is_null($shopUserCupon->shopUser)
+                && !is_null($shopUserCupon->shopUser->email)) {
+                $shopUserCupon->shopUser->description = $shopUserCupon->description;
+                $shopUserCupon->shopUser->code = $shopUserCupon->code;
+            $shopUserCupon->shopUser->notify(new StatusUpdate($shopUserCupon));
         }
         return $shopUserCupon;
     }
@@ -308,14 +328,9 @@ class HomeController extends Controller
                         $shopUser->loyalty_points_available = $shopUser->loyalty_points_available - $cupon->points; 
                         $shopUser->save();
                         // guardar registro de cupon
-                        $shopUserCupon = new ShopUserCupon();
-                        $shopUserCupon->shop_users_id = $shopUser->id;
-                        $shopUserCupon->points = $cupon->points;
-                        $shopUserCupon->type = 2;
-                        $shopUserCupon->code = 'MGC' . $cupon->id . 'U' . $shopUser->id . 'T' . date('U');
-                        $shopUserCupon->name = $cupon->name;
-                        $shopUserCupon->description = $cupon->description;
-                        $shopUserCupon->save();
+                        $shopUserCupon = $this->createShopUserCupon($shopUser->id, $cupon->points, 
+                            'MGC' . $cupon->id . 'U' . $shopUser->id . 'T' . date('U'), 
+                            $cupon->name, $cupon->description, null, 2);
                         // SHOPIFY CREAR CUPON
                             // obtener apiclient
                             $shopifyClient = self::getShopifyClient();

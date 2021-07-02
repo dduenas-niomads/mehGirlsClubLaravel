@@ -3,9 +3,12 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Notifications\Notifiable;
 
 class ShopUser extends Model
 {
+    use Notifiable;
+    
     protected $connection = 'mysql';
     const TABLE_NAME = 'shop_users';
     const STATE_ACTIVE = true;
