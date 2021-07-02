@@ -20,6 +20,7 @@ class ShopUser extends Model
         'id',
         'shop_id',
         'email',
+        'affiliate_code',
         'document_number',
         'birthday',
         'loyalty_points',

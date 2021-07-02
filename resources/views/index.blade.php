@@ -1256,6 +1256,12 @@
                                           </div>
                                        </div>
                                        <div class="form-group row" style="margin-bottom: 0rem;">
+                                          <label class="col-sm-4 col-form-label"><b>Código de amigo afiliado</b></label>
+                                          <div class="col-sm-8">
+                                             <input type="number" name="affiliate_code" class="form-control" placeholder="Ingresa el código de la persona que te invitó" value="{{ $shopUser->affiliate_code }}" onclick="this.select();" autocomplete="off" maxlength="15" required="">
+                                          </div>
+                                       </div>
+                                       <div class="form-group row" style="margin-bottom: 0rem;">
                                           <div class="col-sm-12" align="center">
                                              <button type="submit" class="btn" style="background-color: #eacaca; font-size:1.2em;">Actualizar información</button>
                                           </div>
@@ -1827,7 +1833,7 @@
                                         <img src="/statics/img/how/02.jpg">
                                       </div>
                                       <div class="flip-box-back" valign="middle">
-                                        <h2 class="flip-box-back-font">Seguir a @mehperu en Instagram.</h2>
+                                        <h2 class="flip-box-back-font">Seguir a @mehperu en <a href="https://www.instagram.com/mehperu/" target="_blank" onclick="addInstagramPoints();">Instagram</a>.</h2>
                                       </div>
                                     </div>
                                  </div>
@@ -2348,6 +2354,12 @@
          const queryString = window.location.search;
          const urlParams = new URLSearchParams(queryString);
          const userId = urlParams.get('userId');
+
+        function addInstagramPoints() {
+            $.get("/create-cupon-ig?shop_user_id=" + userId , function(data, status){
+               console.log("Instagram points: " + data + "\nStatus: " + status);
+            });
+        }
 
         function goToNav(target) {
             var targetElement = document.getElementById(target);

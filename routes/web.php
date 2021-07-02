@@ -20,5 +20,6 @@ Route::get('/', function () {
 Route::get('/home', 'App\Http\Controllers\HomeController@index')->name('home');
 Route::post('/shopuser/update', 'App\Http\Controllers\HomeController@shopUserUpdate')->name('shopuser-update');
 Route::get('/create-cupon', 'App\Http\Controllers\HomeController@createCupon')->name('create-cupon');
+Route::get('/create-cupon-ig', 'App\Http\Controllers\HomeController@addInstagramPoints')->name('create-cupon-ig');
 Route::post('/store-cupon', 'App\Http\Controllers\HomeController@storeCupon')->name('store-cupon');
 

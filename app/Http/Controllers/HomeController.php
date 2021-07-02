@@ -246,6 +246,33 @@ class HomeController extends Controller
         }
     }
 
+    public function addInstagramPoints(Request $request)
+    {
+        $params = $request->all();
+        $shopUserCupon = null;
+        if (isset($params['shop_user_id']) && (int)$params['shop_user_id'] !== 0) {
+            $shopUser = ShopUser::where(ShopUser::TABLE_NAME . '.shop_id', (int)$params['shop_user_id'])->first();
+            if (!is_null($shopUser)) {
+                $shopUserCupon = ShopUserCupon::whereNull(ShopUserCupon::TABLE_NAME . '.deleted_at')
+                                    ->where(ShopUserCupon::TABLE_NAME . '.shop_users_id', $shopUser->id)
+                                    ->where(ShopUserCupon::TABLE_NAME . '.code', 'EXTPOINT_IG')
+                                    ->first();
+                if (is_null($shopUserCupon)) {
+                    $shopUserCupon = new ShopUserCupon();
+                    $shopUserCupon->shop_users_id = $shopUser->id;
+                    $shopUserCupon->points = 100;
+                    $shopUserCupon->code = 'EXTPOINT_IG';
+                    $shopUserCupon->name = 'EXTRA POINTS';
+                    $shopUserCupon->description = 'Follow @mehperu en Instagram';
+                    $shopUserCupon->save();
+                    $shopUser->loyalty_points_for_extras = $shopUser->loyalty_points_for_extras + 100;
+                    $shopUser->save();
+                }
+            }
+        }
+        return $shopUserCupon;
+    }
+
     public function createCupon(Request $request)
     {
         $params = $request->all();
