@@ -13,7 +13,7 @@ class AddAffiliateCodeShopUsersTable extends Migration
      */
     public function up()
     {
-        Schema::create('shop_users', function (Blueprint $table) {
+        Schema::table('shop_users', function ($table) {
             $table->string('affiliate_code')->nullable();
         });
     }
