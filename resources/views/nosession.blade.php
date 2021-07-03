@@ -1839,7 +1839,8 @@
                                         <img src="/statics/img/how/05.jpg">
                                       </div>
                                       <div class="flip-box-back" valign="middle">
-                                        <h2 class="flip-box-back-font">Sólo tienes que etiquetarnos con un Outfit meh y entraras al concurso mensual automaticamente.</h2>
+                                      <h2 class="flip-box-back-font">SÓLO 5 GANADORAS. Válido sólo por 1 vez y si se usa ropa de Meh Perú.</h2>
+
                                       </div>
                                     </div>
                                  </div>
@@ -1849,7 +1850,8 @@
                                         <img src="/statics/img/how/06.jpg">
                                       </div>
                                       <div class="flip-box-back" valign="middle">
-                                        <h2 class="flip-box-back-font">Valido sólo por 1 vez y si se usa ropa de Meh Perú.</h2>
+                                      <h2 class="flip-box-back-font">Sólo tienes que etiquetarnos con un Outfit meh y entraras al concurso mensual automaticamente.</h2>
+
                                       </div>
                                     </div>
                                  </div>
@@ -1863,7 +1865,7 @@
                                       </div>
                                     </div>
                                  </div>
-                                 <div class="col-6 col-md-4 flip-box">
+                                 <!-- <div class="col-6 col-md-4 flip-box">
                                     <div class="flip-box-inner">
                                       <div class="flip-box-front">
                                         <img src="/statics/img/how/08.jpg">
@@ -1872,7 +1874,7 @@
                                         <h2 class="flip-box-back-font">Válido por la primera compra de cada amigo que invites.</h2>
                                       </div>
                                     </div>
-                                 </div>
+                                 </div> -->
                               </div>
                               <br>
                               <h3 class="font-weight-bold pl-0 my-4" align="center"><strong>FAQ's</strong></h3>

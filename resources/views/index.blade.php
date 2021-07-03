@@ -1188,14 +1188,14 @@
                                           <p style="margin-top: 0.5rem;">{{ $shopUser->phone ? $shopUser->phone : "Número de teléfono" }}</p>
                                        </div>
                                     </div>
-                                    <div class="form-group row" style="margin-bottom: 0rem;">
+                                    <!-- <div class="form-group row" style="margin-bottom: 0rem;">
                                        <div class="col-sm-4 col-4">
                                           <label class="col-form-label"><b>Afiliado</b></label>
                                        </div>
                                        <div class="col-sm-8 col-8">
                                           <p style="margin-top: 0.5rem;">{{ $shopUser->affiliate_code ? $shopUser->affiliate_code : "Sin afiliado" }}</p>
                                        </div>
-                                    </div>
+                                    </div> -->
                                     <div class="form-group row" style="margin-bottom: 0rem;">
                                        <div class="col-sm-12" align="center">
                                           <button onclick="profileForm(0);" class="btn btn-outline-default" style="font-size:1.2em;">Editar información</button>
@@ -1263,12 +1263,12 @@
                                              <input type="text" name="phone" class="form-control" placeholder="Ingresa un teléfono de contacto" value="{{ $shopUser->phone }}" onclick="this.select();" autocomplete="off" maxlength="15" required="">
                                           </div>
                                        </div>
-                                       <div class="form-group row" style="margin-bottom: 0rem;">
+                                       <!-- <div class="form-group row" style="margin-bottom: 0rem;">
                                           <label class="col-sm-4 col-form-label"><b>Código de amigo afiliado</b></label>
                                           <div class="col-sm-8">
                                              <input type="number" name="affiliate_code" class="form-control" placeholder="Código de la persona que te invitó" value="{{ $shopUser->affiliate_code }}" onclick="this.select();" autocomplete="off" maxlength="15">
                                           </div>
-                                       </div>
+                                       </div> -->
                                        <div class="form-group row" style="margin-bottom: 0rem;">
                                           <div class="col-sm-12" align="center">
                                              <button type="submit" class="btn" style="background-color: #eacaca; font-size:1.2em;">Actualizar información</button>
@@ -1871,7 +1871,8 @@
                                         <img src="/statics/img/how/05.jpg">
                                       </div>
                                       <div class="flip-box-back" valign="middle">
-                                        <h2 class="flip-box-back-font">Sólo tienes que etiquetarnos con un Outfit meh y entrarás al concurso mensual automaticamente.</h2>
+                                      <h2 class="flip-box-back-font">SÓLO 5 GANADORAS. Válido sólo por 1 vez y si se usa ropa de Meh Perú.</h2>
+
                                       </div>
                                     </div>
                                  </div>
@@ -1881,7 +1882,8 @@
                                         <img src="/statics/img/how/06.jpg">
                                       </div>
                                       <div class="flip-box-back" valign="middle">
-                                        <h2 class="flip-box-back-font">SÓLO 5 GANADORAS. Válido sólo por 1 vez y si se usa ropa de Meh Perú.</h2>
+                                         <h2 class="flip-box-back-font">Sólo tienes que etiquetarnos con un Outfit meh y entrarás al concurso mensual automaticamente.</h2>
+
                                       </div>
                                     </div>
                                  </div>
@@ -1895,7 +1897,7 @@
                                       </div>
                                     </div>
                                  </div>
-                                 <div class="col-6 col-md-4 flip-box">
+                                 <!-- <div class="col-6 col-md-4 flip-box">
                                     <div class="flip-box-inner">
                                       <div class="flip-box-front">
                                         <img src="/statics/img/how/08.jpg">
@@ -1904,7 +1906,7 @@
                                         <h2 class="flip-box-back-font">Válido por la primera compra de cada amigo que invites.</h2>
                                       </div>
                                     </div>
-                                 </div>
+                                 </div> -->
                               </div>
                               <br>
                               <h3 class="font-weight-bold pl-0 my-4" align="center"><strong>FAQ's</strong></h3>
