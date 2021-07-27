@@ -43,10 +43,10 @@ class StatusUpdate extends Notification
         return (new MailMessage)
                     ->greeting('¡Hola, ' . $notifiable->first_name . '!')
                     ->line('Un nuevo cupón ha sido creado')
-                    ->line('Descripción: ' . $notifiable->description)
+                    ->line($notifiable->description)
                     ->action($notifiable->code, url('#'))
-                    ->line('Úsalo antes de finalizar tu compra online o en la tienda física.');
-                    ->line('Gracias por ser parte del Meh Girls Club.');
+                    ->line('Úsalo antes de finalizar tu compra online o en la tienda física.')
+                    ->line('Gracias por ser parte del Meh Girls Club.')
                     ->line('Si tienes alguna duda por favor consulta nuestras Preguntas frecuentes o escríbenos respondiendo a este correo (loyalty@mehperu.com) o por Whatsapp al +51 952 928 928 indicando el número de tu orden de compra o código de cupon.');
 
     }
