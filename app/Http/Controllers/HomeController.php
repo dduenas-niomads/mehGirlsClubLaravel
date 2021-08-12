@@ -133,7 +133,7 @@ class HomeController extends Controller
                                         ->first();
                     if (is_null($shopUserCupon)) {
                         $shopUserCupon = $this->createShopUserCupon($shopUser->id, ceil($value->getTotalPrice()), 
-                            '$value->getOrderNumber()','COMPRA', '1 sol = 1 Meh point', $value->getCreatedAt()->format('Y-m-d H:i:s'));
+                            $value->getOrderNumber(),'COMPRA', '1 sol = 1 Meh point', $value->getCreatedAt()->format('Y-m-d H:i:s'));
                     }
                 }
                 $orders = $orders_;
