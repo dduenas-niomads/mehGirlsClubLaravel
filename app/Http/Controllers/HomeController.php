@@ -226,6 +226,8 @@ class HomeController extends Controller
                                     $shopUserAff->save();
                                 }
                             }
+                } else {
+                    $params['affiliate_code'] = null;
                 }
                 $shopUser->first_name = $params['first_name'];
                 $shopUser->last_name = $params['last_name'];
