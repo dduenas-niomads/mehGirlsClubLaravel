@@ -1089,10 +1089,10 @@
                <div class="grid__item post-large--two-thirds push--post-large--one-sixth">
                   <div class="section-header">
                      <div class="row banner_full">
-                        <img src="statics/img/banners/banner_web.jpg" style="width: 100%;">
+                        <a href="#" onclick="goToNav('liMiAccount');"><img src="statics/img/banners/banner_web.jpg" style="width: 100%;"></a>
                      </div>
                      <div class="row banner_mobile">
-                        <img src="statics/img/banners/banner_mobile.jpg" style="width: 100%;">
+                        <a href="#" onclick="goToNav('liMiAccount');"><img src="statics/img/banners/banner_mobile.jpg" style="width: 100%;"></a>
                      </div>
                   </div>
                   <hr>
@@ -1865,17 +1865,36 @@
                                       </div>
                                     </div>
                                  </div>
-                                 <!-- <div class="col-6 col-md-4 flip-box">
-                                    <div class="flip-box-inner">
-                                      <div class="flip-box-front">
-                                        <img src="/statics/img/how/08.jpg">
-                                      </div>
-                                      <div class="flip-box-back" valign="middle">
-                                        <h2 class="flip-box-back-font">Válido por la primera compra de cada amigo que invites.</h2>
-                                      </div>
-                                    </div>
-                                 </div> -->
                               </div>
+                              <!-- MEH LEVELS -->
+                              <br>
+                              <h3 class="font-weight-bold pl-0 my-4" align="center" style="color: #488c69 !important;">Meh Levels</h3>
+                              <br>
+                              <div class="row">
+                                 <div class="col-12 col-md-1"></div>
+                                 <div class="col-6 col-md-2">
+                                    <img src="/statics/img/levels/01.png" alt="" srcset="">
+                                    <h5  align="center"><b>Meh Intern</b><br>0 a 750 puntos</h5>
+                                 </div>
+                                 <div class="col-6 col-md-2">
+                                    <img src="/statics/img/levels/02.png" alt="" srcset="">
+                                    <h5  align="center"><b>Meh Insider</b><br>750 a 2000 puntos</h5>
+                                 </div>
+                                 <div class="col-6 col-md-2">
+                                    <img src="/statics/img/levels/03.png" alt="" srcset="">
+                                    <h5  align="center"><b>Girl Boss</b><br>2000 a 5000 puntos</h5>
+                                 </div>
+                                 <div class="col-6 col-md-2">
+                                    <img src="/statics/img/levels/04.png" alt="" srcset="">
+                                    <h5  align="center"><b>Baby Meh</b><br>5000 a 10000 puntos</h5>
+                                 </div>
+                                 <div class="col-6 col-md-2">
+                                    <img src="/statics/img/levels/05.png" alt="" srcset="">
+                                    <h5  align="center"><b>Meh Girl</b><br>10000 a más puntos</h5>
+                                 </div>
+                                 <div class="col-12 col-md-1"></div>
+                              </div>
+                              <!-- END MEH LEVELS -->
                               <br>
                               <h3 class="font-weight-bold pl-0 my-4" align="center"><strong>FAQ's</strong></h3>
                               <br>
@@ -1897,6 +1916,17 @@
                                   <p>Puedes revisar tu progreso en tu <a href="#" onclick="goToNav('nav-profile-tab');">perfil y consultar tus ordenes pasadas</a>. Recuerda que los puntos vitalicios son para siempre.</p>
                                 </div>
                               </div>
+                              <!-- BANNER BOTTOM -->
+                              <br>
+                              <div class="section-header">
+                                 <div class="row banner_full">
+                                    <a href="#" onclick="goToNav('liMiAccount');"><img src="statics/img/banners/banner_bottom.jpg" style="width: 100%;"></a>
+                                 </div>
+                                 <div class="row banner_mobile">
+                                    <a href="#" onclick="goToNav('liMiAccount');"><img src="statics/img/banners/banner_bottom.jpg" style="width: 100%;"></a>
+                                 </div>
+                              </div>
+                              <!-- END BANNER BOTTOM -->
                            </div>
                         </div>
                         <div class="tab-pane fade" id="nav-benefits" role="tabpanel" aria-labelledby="nav-benefits-tab">
@@ -2006,7 +2036,6 @@
                               </div>
                            </div>
                         </div>
-                        <div class="tab-pane fade" id="nav-wishlist" role="tabpanel" aria-labelledby="nav-wishlist-tab">...4</div>
                      </div>
                   </div>
                </div>
