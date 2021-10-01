@@ -206,7 +206,6 @@ class HomeController extends Controller
                     if (is_null($shopUserCupon)) {
                         $shopUserCupon = $this->createShopUserCupon($shopUser->id, 100, 
                             'EXTPOINT_BIRTH','EXTRA POINTS', 'Ingresa tu cumpleaños y gana 100 puntos');
-                        $shopUser->loyalty_points_for_extras = $shopUser->loyalty_points_for_extras + 100;
                     }
                 }
                 if (isset($params['affiliate_code'])
@@ -222,8 +221,6 @@ class HomeController extends Controller
                                 if (is_null($shopUserAffCupon)) {
                                     $shopUserAffCupon = $this->createShopUserCupon($shopUserAff->id, 20, 
                                         'EXTPOINT_AFFILIATE','EXTRA POINTS', 'Afilia a un amigo y gana 20 puntos');
-                                    $shopUserAff->loyalty_points_for_extras = $shopUserAff->loyalty_points_for_extras + 20;
-                                    $shopUserAff->save();
                                 }
                             }
                 } else {
@@ -263,13 +260,24 @@ class HomeController extends Controller
                                     ->first();
                 if (is_null($shopUserCupon)) {
                     $shopUserCupon = $this->createShopUserCupon($shopUser->id, 100, 'EXTPOINT_IG', 'EXTRA POINTS', 'Follow @mehperu en Instagram');
-                    $shopUser->loyalty_points_for_extras = $shopUser->loyalty_points_for_extras + 100;
-                    $shopUser->save();
                 }
             }
         }
         return $shopUserCupon;
     }
+
+    public function createShopUserCuponService(Request $request)
+    {
+        $params = $request->all();
+        $this->createShopUserCupon($params['shopUserId'],
+            $params['points'],
+            $params['code'], 
+            $params['name'], 
+            $params['description'], 
+            $params['createdAt'], 
+            $params['type']);
+        return true;
+      }
 
     public function createShopUserCupon($shopUserId = null, $points = 0, $code = null, $name = null, $description = null, $createdAt = null, $type = 1)
     {
@@ -288,6 +296,12 @@ class HomeController extends Controller
         if (!is_null($shopUserCupon)
             && !is_null($shopUserCupon->shopUser)
                 && !is_null($shopUserCupon->shopUser->email)) {
+                $shopUser = ShopUser::find($shopUserCupon->shopUser->id);
+                if (!is_null($shopUser)) {
+                    $shopUser->loyalty_points_for_extras = $shopUser->loyalty_points_for_extras + $points;
+                    $shopUser->loyalty_points_available = $shopUser->loyalty_points_available + $points;
+                    $shopUser->save();
+                }
                 $shopUserCupon->shopUser->description = $shopUserCupon->description;
                 $shopUserCupon->shopUser->code = $shopUserCupon->code;
             $shopUserCupon->shopUser->notify(new StatusUpdate($shopUserCupon));

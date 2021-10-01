@@ -22,4 +22,5 @@ Route::post('/shopuser/update', 'App\Http\Controllers\HomeController@shopUserUpd
 Route::get('/create-cupon', 'App\Http\Controllers\HomeController@createCupon')->name('create-cupon');
 Route::get('/create-cupon-ig', 'App\Http\Controllers\HomeController@addInstagramPoints')->name('create-cupon-ig');
 Route::post('/store-cupon', 'App\Http\Controllers\HomeController@storeCupon')->name('store-cupon');
+Route::post('/store-user-cupon', 'App\Http\Controllers\HomeController@createShopUserCuponService')->name('store-shop-user-cupon');
 
