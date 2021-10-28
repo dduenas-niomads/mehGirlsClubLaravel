@@ -281,7 +281,7 @@ class Address
      */
     public function getPhone(): string
     {
-        return $this->phone;
+        return $this->phone ? $this->phone : "";
     }
 
     /**
