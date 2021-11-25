@@ -1098,14 +1098,14 @@
         <main class="wrapper main-content" role="main">
                 <div class="rte">
                     <br>
-                    <h3 class="pl-0 my-4" align="center">!Hola, <b>{{ $shopUser->first_name }}</b>! confirma la información para canjear el cupón</h3>
-                    <h3 class="font-weight-bold pl-0 my-4" align="center"><strong id="cuponsInfoH3">Te quedan {{ $shopUser->loyalty_points_available }} puntos disponibles</strong></h3>
+                    <h3 class="pl-0 my-4" align="center">!Hola, <b>{{ $shopUser->first_name }}</b>! estamos trabajando para darte una mejor experiencia. Muy pronto podrás canjear tus puntos nuevamente.</h3>
+                    <!-- <h3 class="font-weight-bold pl-0 my-4" align="center"><strong id="cuponsInfoH3">Te quedan {{ $shopUser->loyalty_points_available }} puntos disponibles</strong></h3> -->
                     <br>
                     <div class="row" id="personalInfoTab">
                         <div class="col-md-3"></div>
                         <div class="col-md-6" align="left" id="profileInfo" style="display: block;">
                             <br>
-                            <div class="form-group row" style="margin-bottom: 0rem;">
+                            <!-- <div class="form-group row" style="margin-bottom: 0rem;">
                                 <label class="col-sm-4 col-form-label"><b>Cupón</b></label>
                                 <div class="col-sm-8">
                                     <p style="margin-top: 0.5rem;">{{ $cupon->name }}</p>
@@ -1128,18 +1128,18 @@
                                 <div class="col-sm-8">
                                     <p style="margin-top: 0.5rem;">{{ $shopUser->email }}</p>
                                 </div>
-                            </div>
+                            </div> -->
                             <div class="form-group row" style="margin-bottom: 0rem;">
                                 <div class="col-sm-12" align="center">
-                                    <form method="post" action="/store-cupon" autocomplete="off">
-                                       @csrf
-                                       @method('post')
+                                    <!-- <form method="post" action="/store-cupon" autocomplete="off">
+                                       --csrf
+                                       --method('post')
                                        <input type="hidden" name="userId" value="{{ $shopUser->id }}">
                                        <input type="hidden" name="cuponId" value="{{ $cupon->id }}">
-                                       <button type="submit" class="btn btn-outline-default">Canjear cupón</button>
+                                       <button type="submit" class="btn btn-outline-default">Canjear cupón</button> -->
                                        <br>
                                        <button type="button" onclick="javascript:history.back();" class="btn btn-outline-default">Regresar</button>
-                                    </form>
+                                    <!-- </form> -->
                                 </div>
                             </div>
                         </div>
