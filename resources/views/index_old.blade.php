@@ -2096,7 +2096,7 @@
                                       </div>
                                     </div>
                                  </div>
-                                 <div class="col-6 col-md-4 flip-box">
+                                 <!-- <div class="col-6 col-md-4 flip-box">
                                     <div class="flip-box-inner">
                                       <div class="flip-box-front">
                                         <img src="/statics/img/how/02.png">
@@ -2115,7 +2115,7 @@
                                         <h2 class="flip-box-back-font">Válido para compartir via whatsapp o por instagram.</h2>
                                       </div>
                                     </div>
-                                 </div>
+                                 </div> -->
                                  <div class="col-6 col-md-4 flip-box">
                                     <div class="flip-box-inner">
                                       <div class="flip-box-front">
@@ -2126,7 +2126,7 @@
                                       </div>
                                     </div>
                                  </div>
-                                 <div class="col-6 col-md-4 flip-box">
+                                 <!-- <div class="col-6 col-md-4 flip-box">
                                     <div class="flip-box-inner">
                                       <div class="flip-box-front">
                                         <img src="/statics/img/how/05.png">
@@ -2135,7 +2135,7 @@
                                         <h2 class="flip-box-back-font">Sólo tienes que etiquetarnos con un Outfit meh y entraras al concurso mensual automaticamente.</h2>
                                       </div>
                                     </div>
-                                 </div>
+                                 </div> -->
                                  <div class="col-6 col-md-4 flip-box">
                                     <div class="flip-box-inner">
                                       <div class="flip-box-front">

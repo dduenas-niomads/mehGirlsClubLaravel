@@ -1089,7 +1089,7 @@
                <div class="grid__item post-large--two-thirds push--post-large--one-sixth">
                   <div class="section-header">
                      <div class="row banner_full">
-                        <a href="#" onclick="goToNav('liMiAccount');"><img src="statics/img/banners/banner_web.jpg" style="width: 100%;"></a>
+                        <a href="#" onclick="goToNav('liMiAccount');"><img src="statics/img/banners/banner1.png" style="width: 100%;"></a>
                      </div>
                      <div class="row banner_mobile">
                         <a href="#" onclick="goToNav('liMiAccount');"><img src="statics/img/banners/banner_mobile.jpg" style="width: 100%;"></a>
@@ -1803,7 +1803,7 @@
                                       </div>
                                     </div>
                                  </div>
-                                 <div class="col-6 col-md-4 flip-box">
+                                 <!-- <div class="col-6 col-md-4 flip-box">
                                     <div class="flip-box-inner">
                                       <div class="flip-box-front">
                                         <img src="/statics/img/how/02.jpg">
@@ -1812,8 +1812,8 @@
                                         <h2 class="flip-box-back-font">Seguir a @mehperu en Instagram.</h2>
                                       </div>
                                     </div>
-                                 </div>
-                                 <div class="col-6 col-md-4 flip-box">
+                                 </div> -->
+                                 <!-- <div class="col-6 col-md-4 flip-box">
                                     <div class="flip-box-inner">
                                       <div class="flip-box-front">
                                         <img src="/statics/img/how/03.jpg">
@@ -1822,7 +1822,7 @@
                                         <h2 class="flip-box-back-font">Válido para compartir via whatsapp o por instagram.</h2>
                                       </div>
                                     </div>
-                                 </div>
+                                 </div> -->
                                  <div class="col-6 col-md-4 flip-box">
                                     <div class="flip-box-inner">
                                       <div class="flip-box-front">
@@ -1844,7 +1844,7 @@
                                       </div>
                                     </div>
                                  </div>
-                                 <div class="col-6 col-md-4 flip-box">
+                                 <!-- <div class="col-6 col-md-4 flip-box">
                                     <div class="flip-box-inner">
                                       <div class="flip-box-front">
                                         <img src="/statics/img/how/06.jpg">
@@ -1854,7 +1854,7 @@
 
                                       </div>
                                     </div>
-                                 </div>
+                                 </div> -->
                                  <div class="col-6 col-md-4 flip-box">
                                     <div class="flip-box-inner">
                                       <div class="flip-box-front">
@@ -1920,10 +1920,10 @@
                               <br>
                               <div class="section-header">
                                  <div class="row banner_full">
-                                    <a href="#" onclick="goToNav('liMiAccount');"><img src="statics/img/banners/banner_bottom.jpg" style="width: 100%;"></a>
+                                    <a href="#" onclick="goToNav('liMiAccount');"><img src="statics/img/banners/banner2.png" style="width: 100%;"></a>
                                  </div>
                                  <div class="row banner_mobile">
-                                    <a href="#" onclick="goToNav('liMiAccount');"><img src="statics/img/banners/banner_bottom.jpg" style="width: 100%;"></a>
+                                    <a href="#" onclick="goToNav('liMiAccount');"><img src="statics/img/banners/banner2.png" style="width: 100%;"></a>
                                  </div>
                               </div>
                               <!-- END BANNER BOTTOM -->
